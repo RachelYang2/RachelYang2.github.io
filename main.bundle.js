@@ -81,12 +81,14 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__register_register_component__ = __webpack_require__("./src/app/register/register.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__medical_record_medicalRecord_module__ = __webpack_require__("./src/app/medical-record/medicalRecord.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__userinfo_userinfo_component__ = __webpack_require__("./src/app/userinfo/userinfo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__shared_service_data_service__ = __webpack_require__("./src/app/shared/service/data.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -113,7 +115,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__index_index_component__["a" /* IndexComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__login_login_component__["a" /* LoginComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__register_register_component__["a" /* RegisterComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__userinfo_userinfo_component__["a" /* UserinfoComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__userinfo_userinfo_component__["a" /* UserinfoComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -125,7 +127,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_13__medical_record_medicalRecord_module__["a" /* MedicalRecordModule */],
                 __WEBPACK_IMPORTED_MODULE_7_angular2_image_upload__["a" /* ImageUploadModule */].forRoot(),
             ],
-            providers: [],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_15__shared_service_data_service__["a" /* DataService */],
+            ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -152,12 +156,18 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__medical_record_medical_record_component__ = __webpack_require__("./src/app/medical-record/medical-record.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__online_test_practice_practice_component__ = __webpack_require__("./src/app/online-test/practice/practice.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__userinfo_userinfo_component__ = __webpack_require__("./src/app/userinfo/userinfo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__online_test_exam_exam_component__ = __webpack_require__("./src/app/online-test/exam/exam.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__online_test_mistake_mistake_component__ = __webpack_require__("./src/app/online-test/mistake/mistake.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__online_test_collection_collection_component__ = __webpack_require__("./src/app/online-test/collection/collection.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -177,7 +187,10 @@ var appRoutes = [
     { path: 'disease', component: __WEBPACK_IMPORTED_MODULE_7__medical_record_medical_record_component__["a" /* MedicalRecordComponent */] },
     { path: 'tutor', component: __WEBPACK_IMPORTED_MODULE_6__roleplay_tutor_tutor_component__["a" /* TutorComponent */] },
     { path: 'practice', component: __WEBPACK_IMPORTED_MODULE_8__online_test_practice_practice_component__["a" /* PracticeComponent */] },
-    { path: 'userinfo', component: __WEBPACK_IMPORTED_MODULE_9__userinfo_userinfo_component__["a" /* UserinfoComponent */] }
+    { path: 'userinfo', component: __WEBPACK_IMPORTED_MODULE_9__userinfo_userinfo_component__["a" /* UserinfoComponent */] },
+    { path: 'mistake', component: __WEBPACK_IMPORTED_MODULE_11__online_test_mistake_mistake_component__["a" /* MistakeComponent */] },
+    { path: 'collection', component: __WEBPACK_IMPORTED_MODULE_12__online_test_collection_collection_component__["a" /* CollectionComponent */] },
+    { path: 'exam/:id', component: __WEBPACK_IMPORTED_MODULE_10__online_test_exam_exam_component__["a" /* ExamComponent */] }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -198,14 +211,14 @@ var AppRoutingModule = (function () {
 /***/ "./src/app/index/index.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"index-container\">\n    <header class=\"index-header\">\n        <div class=\"header-wrap\">\n            <div class=\"logo-container\">\n                <div class=\"logo-card\">\n                    <a href=\"/\">\n                        <img src=\"./../../assets/images/index/logo.png\">\n                    </a>\n                </div>\n            </div>\n            <div class=\"nav-container\">\n                <div class=\"nav-content\">\n                    <ul class=\"nav-list\">\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#feature1\">3D Navigation</a>\n                            </div>\n                        </li>\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#feature2\">Role Study</a>\n                            </div>\n                        </li>\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#feature3\">Disease Study</a>\n                            </div>\n                        </li>\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#feature4\">Online Test</a>\n                            </div>\n                        </li>\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#contactUs\">Contact Us</a>\n                            </div>\n                        </li>\n                    </ul>\n                </div>\n                <div class=\"login-container\">\n                    <div class=\"login-button\">\n                        <a href=\"/login\">Login</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <section class=\"index-content\">\n        <div class=\"index-cover\">\n            <div class=\"welcome-container\">\n                <div class=\"welcome-title\">\n                    <h1>With Love for Animals</h1>\n                </div>\n                <div class=\"welcome-btn\">\n                    <a href=\"#introInfo\">\n                        Learn more about us\n                    </a>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-intro clearfix\" id=\"introInfo\">\n            <div class=\"intro-container clearfix\">\n                <div class=\"intro-col\">\n                    <div class=\"intro-title\">\n                        <img src=\"./../../assets/images/index/intro1.png\">\n                    </div>\n                    <div class=\"intro-content\">\n                        <p>Kickstart your pet's good health! PAW Plans provide your pet with a comprehensive level of preventive care to live a long and healthy life.</p>\n                    </div>\n                </div>\n                <div class=\"intro-col\">\n                    <div class=\"intro-title\">\n                        <img src=\"./../../assets/images/index/intro2.png\">\n                    </div>\n                    <div class=\"intro-content\">\n                        <p>Pet's dental health is an important part of their health. Dental disease can be easily prevented by visiting vets regularly for dental cleanings.</p>\n                    </div>\n                </div>\n                <div class=\"intro-col\">\n                    <div class=\"intro-title\">\n                        <img src=\"./../../assets/images/index/intro3.png\">\n                    </div>\n                    <div class=\"intro-content\">\n                        <p>Our Veterinarians are ready when your pet needs us and strive to provide personalized, compassionate care. You can trust us!</p>\n                    </div>\n                </div>\n                <div class=\"intro-col\">\n                    <div class=\"intro-title\">\n                        <img src=\"./../../assets/images/index/intro4.png\">\n                    </div>\n                    <div class=\"intro-content\">\n                        <p>We're here to make you and your pet's life easier. We have great offers and services designed just for you!</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-feature\" id=\"feature1\">\n            <div class=\"feature-container\">\n                <div class=\"side-img-container\">\n                    <div class=\"side-img\"></div>\n                </div>\n                <div class=\"side-text-container\">\n                    <div class=\"side-text-wrap\">\n                        <div class=\"side-text-title\">3D Navigation</div>\n                        <div class=\"side-text-text\">3D Navigation shows you the structure of pet hospital.</div>\n                    </div>\n                    <div class=\"side-button\">\n                        <a href=\"/scene\">Go to start</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-feature\" id=\"feature2\">\n            <div class=\"feature-container\">\n                <div class=\"side-text-container\">\n                    <div class=\"side-text-wrap\">\n                        <div class=\"side-text-title\">Role Study</div>\n                        <div class=\"side-text-text\">Role Study shows you the reponsibilities of the vets.</div>\n                    </div>\n                    <div class=\"side-button\">\n                        <a href=\"/role\">Go to start</a>\n                    </div>\n                </div>\n                <div class=\"side-img-container\">\n                    <div class=\"side-img\"></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-feature\" id=\"feature3\">\n            <div class=\"feature-container\">\n                <div class=\"side-img-container\">\n                    <div class=\"side-img\"></div>\n                </div>\n                <div class=\"side-text-container\">\n                    <div class=\"side-text-wrap\">\n                        <div class=\"side-text-title\">Disease Study</div>\n                        <div class=\"side-text-text\">Disease Study shows you the diversity of diseases of the pets.</div>\n                    </div>\n                    <div class=\"side-button\">\n                        <a href=\"/disease\">Go to start</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-feature\" id=\"feature4\">\n            <div class=\"feature-container\">\n                <div class=\"side-text-container\">\n                    <div class=\"side-text-wrap\">\n                        <div class=\"side-text-title\">Online Test</div>\n                        <div class=\"side-text-text\">Online Test can test your knowledge of pet care.</div>\n                    </div>\n                    <div class=\"side-button\">\n                        <a href=\"/practice\">Go to start</a>\n                    </div>\n                </div>\n                <div class=\"side-img-container\">\n                    <div class=\"side-img\"></div>\n                </div>\n            </div>\n        </div>\n    </section>\n    <footer class=\"index-footer clearfix\">\n        <div class=\"footer-content clearfix\">\n            <div class=\"footer-left\">\n                <h4 class=\"p-name\">\n                    <span>Virtual Pet Hospital</span>\n                </h4>\n                <p class=\"p-address p-icon\">\n                    <span>3663 North Zhongshan Rd</span>\n                </p>\n                <p class=\"p-phone p-icon\">\n                    <span>(021)8888-8888</span>\n                </p>\n                <p class=\"p-email p-icon\">\n                    <span>1542752218@qq.com</span>\n                </p>\n                <p class=\"p-chat p-icon\">\n                    <span>Live Chat</span>\n                </p>\n            </div>\n            <div class=\"footer-right\" id=\"contactUs\">\n                <div class=\"social-links\">\n                    <a href=\"/\">\n                        <img src=\"./../../assets/images/index/qq.png\">\n                    </a>\n                    <a href=\"/\">\n                        <img src=\"./../../assets/images/index/wechat.png\"></a>\n                    <a href=\"/\">\n                        <img src=\"./../../assets/images/index/facebook.png\">\n                    </a>\n                    <a href=\"/\">\n                        <img src=\"./../../assets/images/index/google.png\">\n                    </a>\n                </div>\n                <div class=\"work-hours\">\n                    <p>\n                        Work hours:<br>Mon - Fri 7:30 am - 5:30 pm<br>Sat 8:00 am - 12:30 pm<br>Closed Sunday\n                    </p>\n                </div>\n                <div class=\"copyright\">\n                    <p>Copyright © 2018 Virtual Pet Hospital</p>\n                </div>\n            </div>\n        </div>\n    </footer>\n</div>\n"
+module.exports = "<div class=\"index-container\">\n    <header class=\"index-header\">\n        <div class=\"header-wrap\">\n            <div class=\"logo-container\">\n                <div class=\"logo-card\">\n                    <a [routerLink]=\"['/']\">\n                        <img src=\"/assets/images/index/logo.png\">\n                    </a>\n                </div>\n            </div>\n            <div class=\"nav-container\">\n                <div class=\"nav-content\">\n                    <ul class=\"nav-list\">\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#feature1\">3D Navigation</a>\n                            </div>\n                        </li>\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#feature2\">Role Study</a>\n                            </div>\n                        </li>\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#feature3\">Disease Study</a>\n                            </div>\n                        </li>\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#feature4\">Online Test</a>\n                            </div>\n                        </li>\n                        <li class=\"nav-item-wrap\">\n                            <div class=\"nav-item\">\n                                <a href=\"#contactUs\">Contact Us</a>\n                            </div>\n                        </li>\n                    </ul>\n                </div>\n                <div class=\"login-container\">\n                    <div class=\"login-button\">\n                        <a [routerLink]=\"['/login']\">Login</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <section class=\"index-content\">\n        <div class=\"index-cover\">\n            <div class=\"welcome-container\">\n                <div class=\"welcome-title\">\n                    <h1>With Love for Animals</h1>\n                </div>\n                <div class=\"welcome-btn\">\n                    <a href=\"#introInfo\">\n                        Learn more about us\n                    </a>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-intro clearfix\" id=\"introInfo\">\n            <div class=\"intro-container clearfix\">\n                <div class=\"intro-col\">\n                    <div class=\"intro-title\">\n                        <img src=\"/assets/images/index/intro1.png\">\n                    </div>\n                    <div class=\"intro-content\">\n                        <p>Kickstart your pet's good health! PAW Plans provide your pet with a comprehensive level of preventive care to live a long and healthy life.</p>\n                    </div>\n                </div>\n                <div class=\"intro-col\">\n                    <div class=\"intro-title\">\n                        <img src=\"/assets/images/index/intro2.png\">\n                    </div>\n                    <div class=\"intro-content\">\n                        <p>Pet's dental health is an important part of their health. Dental disease can be easily prevented by visiting vets regularly for dental cleanings.</p>\n                    </div>\n                </div>\n                <div class=\"intro-col\">\n                    <div class=\"intro-title\">\n                        <img src=\"/assets/images/index/intro3.png\">\n                    </div>\n                    <div class=\"intro-content\">\n                        <p>Our Veterinarians are ready when your pet needs us and strive to provide personalized, compassionate care. You can trust us!</p>\n                    </div>\n                </div>\n                <div class=\"intro-col\">\n                    <div class=\"intro-title\">\n                        <img src=\"/assets/images/index/intro4.png\">\n                    </div>\n                    <div class=\"intro-content\">\n                        <p>We're here to make you and your pet's life easier. We have great offers and services designed just for you!</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-feature\" id=\"feature1\">\n            <div class=\"feature-container\">\n                <div class=\"side-img-container\">\n                    <div class=\"side-img\"></div>\n                </div>\n                <div class=\"side-text-container\">\n                    <div class=\"side-text-wrap\">\n                        <div class=\"side-text-title\">3D Navigation</div>\n                        <div class=\"side-text-text\">3D Navigation shows you the structure of pet hospital.</div>\n                    </div>\n                    <div class=\"side-button\">\n                        <a [routerLink]=\"['/scene']\">Go to start</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-feature\" id=\"feature2\">\n            <div class=\"feature-container\">\n                <div class=\"side-text-container\">\n                    <div class=\"side-text-wrap\">\n                        <div class=\"side-text-title\">Role Study</div>\n                        <div class=\"side-text-text\">Role Study shows you the reponsibilities of the vets.</div>\n                    </div>\n                    <div class=\"side-button\">\n                        <a [routerLink]=\"['/role']\">Go to start</a>\n                    </div>\n                </div>\n                <div class=\"side-img-container\">\n                    <div class=\"side-img\"></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-feature\" id=\"feature3\">\n            <div class=\"feature-container\">\n                <div class=\"side-img-container\">\n                    <div class=\"side-img\"></div>\n                </div>\n                <div class=\"side-text-container\">\n                    <div class=\"side-text-wrap\">\n                        <div class=\"side-text-title\">Disease Study</div>\n                        <div class=\"side-text-text\">Disease Study shows you the diversity of diseases of the pets.</div>\n                    </div>\n                    <div class=\"side-button\">\n                        <a [routerLink]=\"['/disease']\">Go to start</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"index-feature\" id=\"feature4\">\n            <div class=\"feature-container\">\n                <div class=\"side-text-container\">\n                    <div class=\"side-text-wrap\">\n                        <div class=\"side-text-title\">Online Test</div>\n                        <div class=\"side-text-text\">Online Test can test your knowledge of pet care.</div>\n                    </div>\n                    <div class=\"side-button\">\n                        <a [routerLink]=\"['/practice']\">Go to start</a>\n                    </div>\n                </div>\n                <div class=\"side-img-container\">\n                    <div class=\"side-img\"></div>\n                </div>\n            </div>\n        </div>\n    </section>\n    <footer class=\"index-footer clearfix\">\n        <div class=\"footer-content clearfix\">\n            <div class=\"footer-left\">\n                <h4 class=\"p-name\">\n                    <span>Virtual Pet Hospital</span>\n                </h4>\n                <p class=\"p-address p-icon\">\n                    <span>3663 North Zhongshan Rd</span>\n                </p>\n                <p class=\"p-phone p-icon\">\n                    <span>(021)8888-8888</span>\n                </p>\n                <p class=\"p-email p-icon\">\n                    <span>1542752218@qq.com</span>\n                </p>\n                <p class=\"p-chat p-icon\">\n                    <span>Live Chat</span>\n                </p>\n            </div>\n            <div class=\"footer-right\" id=\"contactUs\">\n                <div class=\"social-links\">\n                    <a href=\"/\">\n                        <img src=\"/assets/images/index/qq.png\">\n                    </a>\n                    <a href=\"/\">\n                        <img src=\"/assets/images/index/wechat.png\"></a>\n                    <a href=\"/\">\n                        <img src=\"/assets/images/index/facebook.png\">\n                    </a>\n                    <a href=\"/\">\n                        <img src=\"/assets/images/index/google.png\">\n                    </a>\n                </div>\n                <div class=\"work-hours\">\n                    <p>\n                        Work hours:<br>Mon - Fri 7:30 am - 5:30 pm<br>Sat 8:00 am - 12:30 pm<br>Closed Sunday\n                    </p>\n                </div>\n                <div class=\"copyright\">\n                    <p>Copyright © 2018 Virtual Pet Hospital</p>\n                </div>\n            </div>\n        </div>\n    </footer>\n</div>\n"
 
 /***/ }),
 
 /***/ "./src/app/index/index.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".index-container .index-header {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 22rem;\n  max-width: 22rem;\n  height: 100vh;\n  background: #7d7b71;\n  text-align: right; }\n  @media screen and (max-width: 82rem) {\n    .index-container .index-header {\n      width: 25%; } }\n  .index-container .index-header .header-wrap {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0; }\n  .index-container .index-header .header-wrap .logo-container {\n      margin: 2rem 1.25rem 3rem 1.25rem; }\n  .index-container .index-header .header-wrap .logo-container .logo-card {\n        padding: 0 1.1rem; }\n  .index-container .index-header .header-wrap .logo-container .logo-card a img {\n          width: 100%; }\n  .index-container .index-header .header-wrap .nav-container {\n      font-size: 1.125rem;\n      font-weight: 800;\n      font-family: 'source-serif-pro';\n      letter-spacing: 2px; }\n  .index-container .index-header .header-wrap .nav-container .nav-content {\n        margin-bottom: 5rem; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap {\n          overflow: hidden;\n          position: relative; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap .nav-item a {\n            display: block;\n            padding: 1rem 2.5rem;\n            color: #fff; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap .nav-item::before {\n            content: \"\";\n            position: absolute;\n            top: 0;\n            left: 0;\n            right: 0;\n            bottom: 0;\n            background: -webkit-gradient(linear, left top, right top, from(#323232), to(rgba(100, 100, 100, 0.5)));\n            background: linear-gradient(to right, #323232, rgba(100, 100, 100, 0.5));\n            -webkit-transform: translateX(-100%);\n                    transform: translateX(-100%);\n            z-index: -1; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap .nav-item:hover::before {\n            -webkit-transform: translateX(0);\n                    transform: translateX(0);\n            -webkit-transition: -webkit-transform 300ms ease-in-out;\n            transition: -webkit-transform 300ms ease-in-out;\n            transition: transform 300ms ease-in-out;\n            transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap .nav-item:hover a {\n            color: #a9ba95; }\n  .index-container .index-header .header-wrap .nav-container .login-container {\n        text-align: center;\n        padding: 0 2rem; }\n  .index-container .index-header .header-wrap .nav-container .login-container .login-button {\n          border: 2px solid #e1ebed;\n          border-radius: 20px;\n          color: #e1ebed;\n          padding: 0.5rem 0;\n          text-transform: uppercase;\n          cursor: pointer;\n          -webkit-transition: background-color 300ms ease-in-out;\n          transition: background-color 300ms ease-in-out; }\n  .index-container .index-header .header-wrap .nav-container .login-container .login-button a {\n            color: #fff; }\n  .index-container .index-header .header-wrap .nav-container .login-container .login-button:hover {\n            background: #a9ba95;\n            -webkit-animation: button-pop 500ms ease-in-out;\n                    animation: button-pop 500ms ease-in-out; }\n  @-webkit-keyframes button-pop {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1); }\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1);\n            transform: scale3d(1.05, 1.05, 1); }\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1); } }\n  @keyframes button-pop {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1); }\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1);\n            transform: scale3d(1.05, 1.05, 1); }\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1); } }\n  .index-container .index-content {\n  background: #fff;\n  padding-left: 22rem; }\n  @media screen and (max-width: 82rem) {\n    .index-container .index-content {\n      padding-left: 25%; } }\n  .index-container .index-content .index-cover {\n    z-index: -1;\n    background-image: url('index-bg.4ac05b3b93e6451296fb.jpg');\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    position: fixed;\n    top: 0;\n    right: 0;\n    left: 22rem;\n    height: 44vw; }\n  @media screen and (max-width: 82rem) {\n      .index-container .index-content .index-cover {\n        left: 25%; } }\n  .index-container .index-content .index-cover .bg-control {\n      position: absolute;\n      bottom: 0;\n      width: 100%;\n      height: 1.5rem;\n      text-align: center;\n      vertical-align: middle; }\n  .index-container .index-content .index-cover .bg-control .bg-control-item {\n        display: inline-block;\n        height: 0.75rem;\n        width: 0.75rem;\n        border-radius: 50%;\n        background: #cecece; }\n  .index-container .index-content .index-cover .bg-control .bg-control-item.active {\n          background: #a9ba95; }\n  .index-container .index-content .index-cover .bg-control .bg-control-item:hover {\n          background: #a9ba95;\n          cursor: pointer; }\n  .index-container .index-content .index-cover .welcome-container {\n      position: absolute;\n      right: 0;\n      top: 50%;\n      width: 26rem;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n      height: 12rem;\n      padding: 0 2.5rem;\n      background: rgba(98, 97, 89, 0.8);\n      text-align: center; }\n  .index-container .index-content .index-cover .welcome-container .welcome-title {\n        position: absolute;\n        top: 2rem;\n        left: 2rem;\n        right: 2rem; }\n  .index-container .index-content .index-cover .welcome-container .welcome-title h1 {\n          font-size: 2.5rem;\n          font-weight: 400;\n          color: #fff; }\n  .index-container .index-content .index-cover .welcome-container .welcome-btn {\n        position: absolute;\n        left: 2rem;\n        right: 2rem;\n        bottom: 2.25rem;\n        top: 51.25%;\n        border: 1px solid #fca675;\n        border-radius: 2rem;\n        background-color: rgba(252, 166, 117, 0.2);\n        -webkit-transition: background-color 300ms ease-in-out;\n        transition: background-color 300ms ease-in-out; }\n  .index-container .index-content .index-cover .welcome-container .welcome-btn:hover {\n          background-color: rgba(252, 166, 117, 0.5); }\n  .index-container .index-content .index-cover .welcome-container .welcome-btn a {\n          position: absolute;\n          top: 0.55rem;\n          bottom: 0.5rem;\n          left: 0.55rem;\n          right: 0.55rem;\n          color: rgba(255, 255, 255, 0.9);\n          font-family: source-serif-pro;\n          font-size: 1rem;\n          letter-spacing: 2px;\n          font-weight: 600;\n          text-transform: uppercase;\n          border-radius: 2rem;\n          background: #fca675;\n          line-height: 250%; }\n  .index-container .index-content .index-cover .welcome-container .welcome-btn::after {\n          background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAwElEQVRIS63WwQ3CMAyF4fc2YBMYhRFgAsQEMAIjlAnKBrCZkaUcEIpTO3aPbfR/6sFJiM4jIkcAK4CF5Lm3xvuOBnAHcGvfUogF7AB8AOyzSBfQqIiUICZQhQyBCmQTyCIuIIO4gVkkBMwgYSCKTAEGciX5+N8ZssAbwKFF64A25b/xJ8lTb18L/0EkrmAIiMZDwEzcDczGXUAmvglk40OgIm4CVfERoCN/aYNjDpHnZmEd+nptWQC8rAn1xHXNF0ePeBn51atqAAAAAElFTkSuQmCC\") 0 0 no-repeat;\n          content: \"\";\n          position: absolute;\n          right: 0.75rem;\n          top: 1rem;\n          height: 1.5rem;\n          width: 1.5rem; }\n  .index-container .index-content .index-intro {\n    background: #fff;\n    margin-top: 44vw; }\n  .index-container .index-content .index-intro .intro-container {\n      padding: 0 1.25rem; }\n  .index-container .index-content .index-intro .intro-container .intro-col {\n        padding: 3rem 1.25rem;\n        width: calc(25% - 2.5rem);\n        float: left; }\n  .index-container .index-content .index-intro .intro-container .intro-col .intro-title {\n          text-align: center;\n          margin-bottom: 1.5rem; }\n  .index-container .index-content .index-intro .intro-container .intro-col .intro-title img {\n            width: 100%; }\n  .index-container .index-content .index-intro .intro-container .intro-col .intro-content {\n          text-align: center;\n          font-weight: 300;\n          color: #666;\n          width: 100%;\n          font-size: 1rem; }\n  .index-container .index-content .index-feature .feature-container {\n    padding: 0 1.25rem; }\n  .index-container .index-content .index-feature .feature-container .side-img-container {\n      display: inline-block;\n      vertical-align: middle;\n      width: 41.5%;\n      -webkit-box-shadow: 0 5px 33px 13px rgba(0, 0, 0, 0.15);\n              box-shadow: 0 5px 33px 13px rgba(0, 0, 0, 0.15); }\n  .index-container .index-content .index-feature .feature-container .side-img-container .side-img {\n        display: block;\n        padding-bottom: 85.6%;\n        width: 100%;\n        background-position: 50% 0;\n        background-size: cover; }\n  .index-container .index-content .index-feature .feature-container .side-text-container {\n      position: relative;\n      display: inline-block;\n      vertical-align: middle;\n      width: calc(50% - 1.25rem);\n      padding: 1.5rem 2rem 4rem;\n      -webkit-box-shadow: 0 5px 33px 13px rgba(0, 0, 0, 0.15);\n              box-shadow: 0 5px 33px 13px rgba(0, 0, 0, 0.15); }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-text-wrap .side-text-title {\n        font-family: 'Abril';\n        font-weight: 600;\n        line-height: 1.182;\n        color: #4e4e4e;\n        font-size: 2rem;\n        width: 100%; }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-text-wrap .side-text-text {\n        color: #898888;\n        font-size: 1.2rem;\n        font-style: italic;\n        width: 100%;\n        font-weight: 500; }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-button {\n        position: absolute;\n        left: 0;\n        bottom: 0;\n        -webkit-transform: translateY(50%);\n                transform: translateY(50%);\n        text-align: center;\n        width: 100%; }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-button a {\n          display: inline-block;\n          vertical-align: middle;\n          padding: 0.75rem 4rem;\n          -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);\n                  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);\n          font-family: 'source-serif-pro';\n          font-size: 1rem;\n          letter-spacing: 2px;\n          text-transform: uppercase;\n          background-color: #a9ba95;\n          cursor: pointer;\n          color: #fff;\n          -webkit-transition: background-color 400ms ease-in-out;\n          transition: background-color 400ms ease-in-out; }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-button a:hover {\n            background-color: #90a676;\n            -webkit-animation: button-pop 400ms infinite ease-in-out;\n                    animation: button-pop 400ms infinite ease-in-out; }\n  .index-container .index-content #feature1, .index-container .index-content #feature3 {\n    background: #e1ebed; }\n  .index-container .index-content #feature1 .side-img-container, .index-container .index-content #feature3 .side-img-container {\n      margin: 3rem -6.5% 3rem 7.2%; }\n  .index-container .index-content #feature1 .side-text-container, .index-container .index-content #feature3 .side-text-container {\n      margin: 3rem 0;\n      background: #fff;\n      border-left: 5px solid #a9ba95; }\n  .index-container .index-content #feature2 .side-img-container, .index-container .index-content #feature4 .side-img-container {\n    margin: 3rem 0 3rem -6.5%; }\n  .index-container .index-content #feature2 .side-text-container, .index-container .index-content #feature4 .side-text-container {\n    margin: 3rem 0 3rem 7.2%;\n    background: #e1ebed;\n    border-right: 5px solid #a9ba95; }\n  .index-container .index-content #feature1 .side-img {\n    background-image: url('feature1.2d7ba2651dec4c5c507e.jpg'); }\n  .index-container .index-content #feature2 .side-img {\n    background-image: url('feature2.e095766e0b7b45b41768.jpg'); }\n  .index-container .index-content #feature3 .side-img {\n    background-image: url('feature3.e0b57d53e5844ba81c2e.jpg'); }\n  .index-container .index-content #feature4 .side-img {\n    background-image: url('feature4.22faf49a27727672c79b.jpg'); }\n  .index-container .index-footer {\n  padding-left: 22rem;\n  padding-top: 2rem;\n  padding-bottom: 4rem;\n  background: #706e65; }\n  @media screen and (max-width: 82rem) {\n    .index-container .index-footer {\n      padding-left: 25%; } }\n  .index-container .index-footer .footer-content {\n    padding: 0 1.25rem;\n    color: #fff; }\n  .index-container .index-footer .footer-content .footer-left {\n      float: left;\n      padding-left: 1.25rem; }\n  .index-container .index-footer .footer-content .footer-left .p-name {\n        position: relative;\n        margin-bottom: 0.5rem;\n        padding-bottom: 0.5rem;\n        text-align: center;\n        font-size: 1rem; }\n  .index-container .index-footer .footer-content .footer-left .p-name::after {\n          -webkit-transform: translateX(-50%);\n                  transform: translateX(-50%);\n          content: '';\n          background-color: #a9ba95;\n          display: block;\n          height: 5px;\n          width: 80px;\n          position: absolute;\n          bottom: 0;\n          left: 50%; }\n  .index-container .index-footer .footer-content .footer-left .p-icon {\n        font-size: 0.8rem;\n        line-height: 20px;\n        padding-bottom: 0.25rem;\n        font-weight: 600; }\n  .index-container .index-footer .footer-content .footer-left .p-icon span::before {\n          content: \"\";\n          display: inline-block;\n          margin-right: 0.5rem;\n          width: 20px;\n          height: 20px;\n          vertical-align: middle; }\n  .index-container .index-footer .footer-content .footer-left .p-address span::before {\n        background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABPklEQVQ4T62UYVFDMRCEdxVQFEAVAA6KA1BAcYADQAGgABwACqgDwAFVAChYZmeSzr285KWdIX/evCT3ZS+3OeKfB6d4ko4BXADw1+MDwCvJVSuuCpQ0A/AI4KwRaOA5yZ9yfQRMsLegqiXGak9LaA14A+A6UH4B5BQXAPbC2gPJq3hiDeg0ctAngEVWkdQbfhQg+1HlACjJCpxuHr6nl6igssdpb4rUA85JfpWXKElh7pLkU/7vAWsKXfnnAJxUaLt8h81WZ6grCkmHCZZ96elBFrWiODheuoNileMNrEn6kM2oAW2Duy1f5C1J22wS6LSdavRbiz8qWuvpleauAUfqvKnZHCRZ5UFD2tpPc6u3nAGp07w3gCe58uV6r30tU9eJcQMj7wRM3ovQUTPYGRigM5L3PTtNptwLrq3/AQgRexVvRvjRAAAAAElFTkSuQmCC\"); }\n  .index-container .index-footer .footer-content .footer-left .p-phone span::before {\n        background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABJUlEQVQ4T62U/RHBQBDF36uADlABKkAFpAJ0oAQqQAdKoAJ0QAWUoIM1b+Yuczn5uMzYf5LJZH/79XaJPxtjnpmtAMwBXEie2sbLgWbWBXAFMHKQD4ABST2TLQQqm2XkuSO5TaYBCIE3AJPI+U1y8E+gWCr7nQoNM9wA2EeOGswiFab/QmAfwCtwfpL0A0pmFmRjZvFgxiQfybQwQzmZmbIUoOMgep+1kU6ZsONenklmqVn+AF2mZ7ctnnMkqUCNVgXU1kiXw4Cw9qvo1vNWJqdSoMtSExbU91OfNTQF81I6ANA25etZCayBxmVL9JlXQy2wBfROcloQdl23zUzla1C9iv/yI9KYoQe486aexRepsFHJwAAs8esIq0RpVEFyaw1sEuIXn+9kFdxM4+gAAAAASUVORK5CYII=\"); }\n  .index-container .index-footer .footer-content .footer-left .p-email span::before {\n        background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA1UlEQVQ4T+2UUQ3CQBBE3ygAByABFIADKgEcFAVQB0UBSKgDioNKQEJRsGSTlpSSozTpTxPu827n7e7c7YmBlwbmMSKgmS2AKzDtaUMJLCXdXfdq2cyOwAG4AasfoXVsIsn1n0BJMrMY8IBJAPwAtpIyMzMgDARyYAd4Kxdg04KeqmRuzRlYdwFd77BUUmJmLnCw78WS8oY9da6vFTYLKoA9UEgqK7hXNW9V/TOw1qUVJAp42hvYdel/IFCNXgbMugxrnfu0RP4K3ialJyQYPqLva6iWn1CJYxVE9temAAAAAElFTkSuQmCC\"); }\n  .index-container .index-footer .footer-content .footer-left .p-chat span::before {\n        background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABD0lEQVQ4T72U7VECQRBEX2eAGWgEGIJEoEYARCBmYAgQgRqBEoGEABFABpDBUE0tV3ew6npcOVVX92f2bW/Ph+g41DGPb4ERcQfcA7fAdbp4AyyBuaRFTswZMCJ8+BUw8KcwcCzJl1TRAEaE1XwBvUIrdsBAklUfogJGhCHrP8CODENvJPnfAL4Bw0Jlp2nvkkYVMKnbtoT52E7SVR3oAti7S8JeLg4ephbpFOhWcUEuCRdmU6+yS99vSVxJcss1qvwAfLQEPkr6bACTl21ap2qZM2CCToGnQqUzSZN6bnY5RET8ApwD09yCyC2HupfPabu4Czxa/pbHMctdmgP6yZ7rl9NNUmLD/y3YEjW5nD1euVoV1WOcSQAAAABJRU5ErkJggg==\"); }\n  .index-container .index-footer .footer-content .footer-right {\n      float: right;\n      padding-right: 1.25rem;\n      text-align: right;\n      font-weight: 600;\n      font-size: 0.8rem; }\n  .index-container .index-footer .footer-content .footer-right .social-links {\n        margin-bottom: 0.5rem; }\n  .index-container .index-footer .footer-content .footer-right .social-links a {\n          margin: 0 0 0 0.65rem;\n          display: inline-block;\n          height: 40px;\n          width: 40px;\n          background-color: #a9ba95;\n          border-radius: 5px;\n          text-align: center; }\n  .index-container .index-footer .footer-content .footer-right .social-links a img {\n            height: 60%;\n            -webkit-transform: translateY(30%);\n                    transform: translateY(30%); }\n  .index-container .index-footer .footer-content .footer-right .social-links a:first-child {\n          margin-left: 0; }\n  .index-container .index-footer .footer-content .footer-right .work-hours {\n        margin-bottom: 0.5rem; }\n  .index-container .index-footer .footer-content .footer-right .copyright {\n        margin-bottom: 1rem; }\n"
+module.exports = ".index-container .index-header {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 22rem;\n  max-width: 22rem;\n  height: 100vh;\n  background: #7d7b71;\n  text-align: right; }\n  @media screen and (max-width: 82rem) {\n    .index-container .index-header {\n      width: 25%; } }\n  .index-container .index-header .header-wrap {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0; }\n  .index-container .index-header .header-wrap .logo-container {\n      margin: 2rem 1.25rem 3rem 1.25rem; }\n  .index-container .index-header .header-wrap .logo-container .logo-card {\n        padding: 0 1.1rem; }\n  .index-container .index-header .header-wrap .logo-container .logo-card a img {\n          width: 100%; }\n  .index-container .index-header .header-wrap .nav-container {\n      font-size: 1.125rem;\n      font-weight: 800;\n      font-family: 'source-serif-pro';\n      letter-spacing: 2px; }\n  .index-container .index-header .header-wrap .nav-container .nav-content {\n        margin-bottom: 5rem; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap {\n          overflow: hidden;\n          position: relative; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap .nav-item a {\n            display: block;\n            padding: 1rem 2.5rem;\n            color: #fff; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap .nav-item::before {\n            content: \"\";\n            position: absolute;\n            top: 0;\n            left: 0;\n            right: 0;\n            bottom: 0;\n            background: -webkit-gradient(linear, left top, right top, from(#323232), to(rgba(100, 100, 100, 0.5)));\n            background: linear-gradient(to right, #323232, rgba(100, 100, 100, 0.5));\n            -webkit-transform: translateX(-100%);\n                    transform: translateX(-100%);\n            z-index: -1; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap .nav-item:hover {\n            -webkit-transform: scale(1.15);\n                    transform: scale(1.15);\n            -webkit-transition: -webkit-transform 300ms ease-in-out;\n            transition: -webkit-transform 300ms ease-in-out;\n            transition: transform 300ms ease-in-out;\n            transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap .nav-item:hover::before {\n              -webkit-transform: translateX(0);\n                      transform: translateX(0);\n              -webkit-transition: -webkit-transform 300ms ease-in-out;\n              transition: -webkit-transform 300ms ease-in-out;\n              transition: transform 300ms ease-in-out;\n              transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out; }\n  .index-container .index-header .header-wrap .nav-container .nav-content .nav-list .nav-item-wrap .nav-item:hover a {\n              color: #a9ba95; }\n  .index-container .index-header .header-wrap .nav-container .login-container {\n        text-align: center;\n        padding: 0 2rem; }\n  .index-container .index-header .header-wrap .nav-container .login-container .login-button {\n          border: 2px solid #e1ebed;\n          border-radius: 20px;\n          color: #e1ebed;\n          padding: 0.5rem 0;\n          text-transform: uppercase;\n          cursor: pointer;\n          -webkit-transition: background-color 300ms ease-in-out;\n          transition: background-color 300ms ease-in-out; }\n  .index-container .index-header .header-wrap .nav-container .login-container .login-button a {\n            color: #fff; }\n  .index-container .index-header .header-wrap .nav-container .login-container .login-button:hover {\n            background: #a9ba95;\n            -webkit-animation: button-pop 500ms ease-in-out;\n                    animation: button-pop 500ms ease-in-out; }\n  @-webkit-keyframes button-pop {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1); }\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1);\n            transform: scale3d(1.05, 1.05, 1); }\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1); } }\n  @keyframes button-pop {\n  0% {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1); }\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1);\n            transform: scale3d(1.05, 1.05, 1); }\n  100% {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1); } }\n  .index-container .index-content {\n  background: #fff;\n  padding-left: 22rem; }\n  @media screen and (max-width: 82rem) {\n    .index-container .index-content {\n      padding-left: 25%; } }\n  .index-container .index-content .index-cover {\n    z-index: -1;\n    background-image: url('index-bg.4ac05b3b93e6451296fb.jpg');\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    position: fixed;\n    top: 0;\n    right: 0;\n    left: 22rem;\n    height: 44vw; }\n  @media screen and (max-width: 82rem) {\n      .index-container .index-content .index-cover {\n        left: 25%; } }\n  .index-container .index-content .index-cover .bg-control {\n      position: absolute;\n      bottom: 0;\n      width: 100%;\n      height: 1.5rem;\n      text-align: center;\n      vertical-align: middle; }\n  .index-container .index-content .index-cover .bg-control .bg-control-item {\n        display: inline-block;\n        height: 0.75rem;\n        width: 0.75rem;\n        border-radius: 50%;\n        background: #cecece; }\n  .index-container .index-content .index-cover .bg-control .bg-control-item.active {\n          background: #a9ba95; }\n  .index-container .index-content .index-cover .bg-control .bg-control-item:hover {\n          background: #a9ba95;\n          cursor: pointer; }\n  .index-container .index-content .index-cover .welcome-container {\n      position: absolute;\n      right: 0;\n      top: 50%;\n      width: 26rem;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n      height: 12rem;\n      padding: 0 2.5rem;\n      background: rgba(98, 97, 89, 0.8);\n      text-align: center; }\n  .index-container .index-content .index-cover .welcome-container .welcome-title {\n        position: absolute;\n        top: 2rem;\n        left: 2rem;\n        right: 2rem; }\n  .index-container .index-content .index-cover .welcome-container .welcome-title h1 {\n          font-size: 2.5rem;\n          font-weight: 400;\n          color: #fff; }\n  .index-container .index-content .index-cover .welcome-container .welcome-btn {\n        position: absolute;\n        left: 2rem;\n        right: 2rem;\n        bottom: 2.25rem;\n        top: 51.25%;\n        border: 1px solid #fca675;\n        border-radius: 2rem;\n        background-color: rgba(252, 166, 117, 0.2);\n        -webkit-transition: background-color 300ms ease-in-out;\n        transition: background-color 300ms ease-in-out; }\n  .index-container .index-content .index-cover .welcome-container .welcome-btn:hover {\n          background-color: rgba(252, 166, 117, 0.5); }\n  .index-container .index-content .index-cover .welcome-container .welcome-btn a {\n          position: absolute;\n          top: 0.55rem;\n          bottom: 0.5rem;\n          left: 0.55rem;\n          right: 0.55rem;\n          color: rgba(255, 255, 255, 0.9);\n          font-family: source-serif-pro;\n          font-size: 1rem;\n          letter-spacing: 2px;\n          font-weight: 600;\n          text-transform: uppercase;\n          border-radius: 2rem;\n          background: #fca675;\n          line-height: 250%; }\n  .index-container .index-content .index-cover .welcome-container .welcome-btn::after {\n          background: url(\"/assets/images/index/right-arrow.png\") 0 0 no-repeat;\n          content: \"\";\n          position: absolute;\n          right: 0.75rem;\n          top: 1rem;\n          height: 1.5rem;\n          width: 1.5rem; }\n  .index-container .index-content .index-intro {\n    background: #fff;\n    margin-top: 44vw; }\n  .index-container .index-content .index-intro .intro-container {\n      padding: 0 1.25rem; }\n  .index-container .index-content .index-intro .intro-container .intro-col {\n        padding: 3rem 1.25rem;\n        width: calc(25% - 2.5rem);\n        float: left; }\n  .index-container .index-content .index-intro .intro-container .intro-col .intro-title {\n          text-align: center;\n          margin-bottom: 1.5rem; }\n  .index-container .index-content .index-intro .intro-container .intro-col .intro-title img {\n            width: 100%; }\n  .index-container .index-content .index-intro .intro-container .intro-col .intro-content {\n          text-align: center;\n          font-weight: 300;\n          color: #666;\n          width: 100%;\n          font-size: 1rem; }\n  .index-container .index-content .index-feature .feature-container {\n    padding: 0 1.25rem; }\n  .index-container .index-content .index-feature .feature-container .side-img-container {\n      display: inline-block;\n      vertical-align: middle;\n      width: 41.5%;\n      -webkit-box-shadow: 0 5px 33px 13px rgba(0, 0, 0, 0.15);\n              box-shadow: 0 5px 33px 13px rgba(0, 0, 0, 0.15); }\n  .index-container .index-content .index-feature .feature-container .side-img-container .side-img {\n        display: block;\n        padding-bottom: 85.6%;\n        width: 100%;\n        background-position: 50% 0;\n        background-size: cover; }\n  .index-container .index-content .index-feature .feature-container .side-text-container {\n      position: relative;\n      display: inline-block;\n      vertical-align: middle;\n      width: calc(50% - 1.25rem);\n      padding: 1.5rem 2rem 4rem;\n      -webkit-box-shadow: 0 5px 33px 13px rgba(0, 0, 0, 0.15);\n              box-shadow: 0 5px 33px 13px rgba(0, 0, 0, 0.15); }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-text-wrap .side-text-title {\n        font-family: 'Abril';\n        font-weight: 600;\n        line-height: 1.182;\n        color: #4e4e4e;\n        font-size: 2rem;\n        width: 100%; }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-text-wrap .side-text-text {\n        color: #898888;\n        font-size: 1.2rem;\n        font-style: italic;\n        width: 100%;\n        font-weight: 500; }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-button {\n        position: absolute;\n        left: 0;\n        bottom: 0;\n        -webkit-transform: translateY(50%);\n                transform: translateY(50%);\n        text-align: center;\n        width: 100%; }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-button a {\n          display: inline-block;\n          vertical-align: middle;\n          padding: 0.75rem 4rem;\n          -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);\n                  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);\n          font-family: 'source-serif-pro';\n          font-size: 1rem;\n          letter-spacing: 2px;\n          text-transform: uppercase;\n          background-color: #a9ba95;\n          cursor: pointer;\n          color: #fff;\n          -webkit-transition: background-color 400ms ease-in-out;\n          transition: background-color 400ms ease-in-out; }\n  .index-container .index-content .index-feature .feature-container .side-text-container .side-button a:hover {\n            background-color: #90a676;\n            -webkit-animation: button-pop 400ms infinite ease-in-out;\n                    animation: button-pop 400ms infinite ease-in-out; }\n  .index-container .index-content #feature1, .index-container .index-content #feature3 {\n    background: #e1ebed; }\n  .index-container .index-content #feature1 .side-img-container, .index-container .index-content #feature3 .side-img-container {\n      margin: 3rem -6.5% 3rem 7.2%; }\n  .index-container .index-content #feature1 .side-text-container, .index-container .index-content #feature3 .side-text-container {\n      margin: 3rem 0;\n      background: #fff;\n      border-left: 5px solid #a9ba95; }\n  .index-container .index-content #feature2 .side-img-container, .index-container .index-content #feature4 .side-img-container {\n    margin: 3rem 0 3rem -6.5%; }\n  .index-container .index-content #feature2 .side-text-container, .index-container .index-content #feature4 .side-text-container {\n    margin: 3rem 0 3rem 7.2%;\n    background: #e1ebed;\n    border-right: 5px solid #a9ba95; }\n  .index-container .index-content #feature1 .side-img {\n    background-image: url(\"/assets/images/index/feature1.jpg\"); }\n  .index-container .index-content #feature2 .side-img {\n    background-image: url(\"/assets/images/index/feature2.jpg\"); }\n  .index-container .index-content #feature3 .side-img {\n    background-image: url(\"/assets/images/index/feature3.jpg\"); }\n  .index-container .index-content #feature4 .side-img {\n    background-image: url(\"/assets/images/index/feature4.jpg\"); }\n  .index-container .index-footer {\n  padding-left: 22rem;\n  padding-top: 2rem;\n  padding-bottom: 4rem;\n  background: #706e65; }\n  @media screen and (max-width: 82rem) {\n    .index-container .index-footer {\n      padding-left: 25%; } }\n  .index-container .index-footer .footer-content {\n    padding: 0 1.25rem;\n    color: #fff; }\n  .index-container .index-footer .footer-content .footer-left {\n      float: left;\n      padding-left: 1.25rem; }\n  .index-container .index-footer .footer-content .footer-left .p-name {\n        position: relative;\n        margin-bottom: 0.5rem;\n        padding-bottom: 0.5rem;\n        text-align: center;\n        font-size: 1rem; }\n  .index-container .index-footer .footer-content .footer-left .p-name::after {\n          -webkit-transform: translateX(-50%);\n                  transform: translateX(-50%);\n          content: '';\n          background-color: #a9ba95;\n          display: block;\n          height: 5px;\n          width: 80px;\n          position: absolute;\n          bottom: 0;\n          left: 50%; }\n  .index-container .index-footer .footer-content .footer-left .p-icon {\n        font-size: 0.8rem;\n        line-height: 20px;\n        padding-bottom: 0.25rem;\n        font-weight: 600; }\n  .index-container .index-footer .footer-content .footer-left .p-icon span::before {\n          content: \"\";\n          display: inline-block;\n          margin-right: 0.5rem;\n          width: 20px;\n          height: 20px;\n          vertical-align: middle; }\n  .index-container .index-footer .footer-content .footer-left .p-address span::before {\n        background: url(\"/assets/images/index/location.png\"); }\n  .index-container .index-footer .footer-content .footer-left .p-phone span::before {\n        background: url(\"/assets/images/index/phone.png\"); }\n  .index-container .index-footer .footer-content .footer-left .p-email span::before {\n        background: url(\"/assets/images/index/email.png\"); }\n  .index-container .index-footer .footer-content .footer-left .p-chat span::before {\n        background: url(\"/assets/images/index/chat.png\"); }\n  .index-container .index-footer .footer-content .footer-right {\n      float: right;\n      padding-right: 1.25rem;\n      text-align: right;\n      font-weight: 600;\n      font-size: 0.8rem; }\n  .index-container .index-footer .footer-content .footer-right .social-links {\n        margin-bottom: 0.5rem; }\n  .index-container .index-footer .footer-content .footer-right .social-links a {\n          margin: 0 0 0 0.65rem;\n          display: inline-block;\n          height: 40px;\n          width: 40px;\n          background-color: #a9ba95;\n          border-radius: 5px;\n          text-align: center; }\n  .index-container .index-footer .footer-content .footer-right .social-links a img {\n            height: 60%;\n            -webkit-transform: translateY(30%);\n                    transform: translateY(30%); }\n  .index-container .index-footer .footer-content .footer-right .social-links a:first-child {\n          margin-left: 0; }\n  .index-container .index-footer .footer-content .footer-right .work-hours {\n        margin-bottom: 0.5rem; }\n  .index-container .index-footer .footer-content .footer-right .copyright {\n        margin-bottom: 1rem; }\n"
 
 /***/ }),
 
@@ -215,6 +228,7 @@ module.exports = ".index-container .index-header {\n  position: fixed;\n  top: 0
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IndexComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__ = __webpack_require__("./src/app/shared/service/data.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -225,8 +239,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var IndexComponent = (function () {
-    function IndexComponent() {
+    function IndexComponent(dataService) {
+        this.dataService = dataService;
+        this.dataService.getRoomInfo()
+            .subscribe(function (data) { return console.log(data); });
     }
     IndexComponent.prototype.ngOnInit = function () {
     };
@@ -236,7 +254,7 @@ var IndexComponent = (function () {
             template: __webpack_require__("./src/app/index/index.component.html"),
             styles: [__webpack_require__("./src/app/index/index.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__["a" /* DataService */]])
     ], IndexComponent);
     return IndexComponent;
 }());
@@ -248,7 +266,7 @@ var IndexComponent = (function () {
 /***/ "./src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"login\">\n    <div class=\"wrapper\">\n        <div class=\"login\">\n            <form action=\"#\" method=\"post\" class=\"container offset1 loginform\" #loginForm=\"ngForm\" (ngSubmit)=\"doSubmit(loginForm.value)\">\n                <div id=\"owl-login\">\n                    <div class=\"hand\"></div>\n                    <div class=\"hand hand-r\"></div>\n                    <div class=\"arms\">\n                        <div class=\"arm\"></div>\n                        <div class=\"arm arm-r\"></div>\n                    </div>\n                </div>\n                <div class=\"pad\">\n                    <div class=\"control-group\">\n                        <div class=\"controls\">\n                        <label for=\"userName\" class=\"control-label fa fa-user\"></label>\n                            <input id=\"userName\" type=\"text\" name=\"userName\" placeholder=\"user name\" tabindex=\"1\" autofocus=\"autofocus\" class=\"form-control input-medium\" [(ngModel)]=\"formData.userName\" #userName=\"ngModel\" required>\n                            <div *ngIf=\"userName.errors && (userName.dirty || userName.touched)\" class=\"error\">\n                                <span [hidden]=\"!userName.errors.required\">\n                                    <i class=\"fa fa-info-circle large\"></i>\n                                    &nbsp;user name is required\n                                </span>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"control-group\">\n                        <div class=\"controls\">\n                            <label for=\"password\" class=\"control-label fa fa-asterisk\"></label>\n                            <input id=\"password\" type=\"password\" name=\"password\" placeholder=\"password\" tabindex=\"2\" class=\"form-control input-medium\" [(ngModel)]=\"formData.password\" #password=\"ngModel\" required>\n                            <div *ngIf=\"password.errors && (password.dirty || password.touched)\" class=\"error\">\n                                    <span [hidden]=\"!password.errors.required\">\n                                        <i class=\"fa fa-info-circle large\"></i>\n                                        &nbsp;password is required\n                                    </span>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"form-actions\"><a href=\"#\" tabindex=\"5\" class=\"btn pull-left btn-link text-muted\">Forgot password?</a><a routerLink=\"/signup\" tabindex=\"6\" class=\"btn btn-link text-muted\">Sign Up</a>\n                    <button type=\"submit\" tabindex=\"4\" class=\"btn btn-primary\">Login</button>\n                </div>\n            </form>\n        </div>\n    </div>\n</div>"
+module.exports = "<div id=\"login\">\n    <div class=\"wrapper\">\n        <div class=\"login\">\n            <form action=\"#\" method=\"post\" class=\"container offset1 loginform\" #loginForm=\"ngForm\" (ngSubmit)=\"doSubmit(loginForm.value)\">\n                <div id=\"owl-login\">\n                    <div class=\"hand\"></div>\n                    <div class=\"hand hand-r\"></div>\n                    <div class=\"arms\">\n                        <div class=\"arm\"></div>\n                        <div class=\"arm arm-r\"></div>\n                    </div>\n                </div>\n                <div class=\"pad\">\n                    <div class=\"control-group\">\n                        <div class=\"controls\">\n                        <label for=\"username\" class=\"control-label fa fa-user\"></label>\n                            <input id=\"username\" type=\"text\" name=\"username\" placeholder=\"用户名\" tabindex=\"1\" autofocus=\"autofocus\" class=\"form-control input-medium\" [(ngModel)]=\"formData.username\" #username=\"ngModel\" required>\n                            <div *ngIf=\"username.errors && (username.dirty || username.touched)\" class=\"error\">\n                                <span [hidden]=\"!username.errors.required\">\n                                    <i class=\"fa fa-info-circle large\"></i>\n                                    &nbsp;user name is required\n                                </span>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"control-group\">\n                        <div class=\"controls\">\n                            <label for=\"password\" class=\"control-label fa fa-asterisk\"></label>\n                            <input id=\"password\" type=\"password\" name=\"password\" placeholder=\"password\" tabindex=\"2\" class=\"form-control input-medium\" [(ngModel)]=\"formData.password\" #password=\"ngModel\" required>\n                            <div *ngIf=\"password.errors && (password.dirty || password.touched)\" class=\"error\">\n                                    <span [hidden]=\"!password.errors.required\">\n                                        <i class=\"fa fa-info-circle large\"></i>\n                                        &nbsp;password is required\n                                    </span>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"form-actions\"><a href=\"#\" tabindex=\"5\" class=\"btn pull-left btn-link text-muted\">Forgot password?</a><a routerLink=\"/signup\" tabindex=\"6\" class=\"btn btn-link text-muted\">Sign Up</a>\n                    <button type=\"submit\" tabindex=\"4\" class=\"btn btn-primary\">Login</button>\n                </div>\n            </form>\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -297,13 +315,12 @@ var LoginComponent = (function () {
         });
     };
     LoginComponent.prototype.doSubmit = function (obj) {
-        console.log(this.loginForm.valid);
         if (!this.loginForm.valid) {
             return;
         }
-        var url = 'http://localhost:8000/users/';
+        var url = 'http://localhost:8000/user/login';
         console.log(JSON.stringify(obj));
-        this.http.get(url, obj).subscribe(function (data) {
+        this.http.post(url, obj).subscribe(function (data) {
             console.log(data);
         }, function (err) {
             console.log(err);
@@ -331,7 +348,7 @@ var LoginComponent = (function () {
 /***/ "./src/app/medical-record/medical-record.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"categories\">\n  <h2 class=\"title\">病例目录</h2>\n  <div *ngFor=\"let parent of nodes\" class=\"parent\">\n    <span (click)=\"parent.isExpanded = !parent.isExpanded;\">\n      <i [ngClass]=\"{'fa-caret-down' : parent.isExpanded, 'fa-caret-right' : !parent.isExpanded }\" class=\"fa large\"></i>&nbsp;{{parent.name}}\n    </span>\n    <div *ngIf=\"parent.isExpanded\">\n      <div *ngFor=\"let child of parent.children\" class=\"child\">\n        <span (click)=\"showDetail(parent, child)\"><i class=\"fa fa-user-md large\"></i>&nbsp;\n          {{child.name}}</span>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"recordContent\">\n  <div *ngIf=\"currentRecord.name === null\">\n    <img src=\"../../assets/images/medicalRecord/nullrecord.jpeg\" class=\"null-record-image\"/>\n    <div class=\"tip\">\n      <h2>请选择您想要学习的病例</h2>\n    </div>\n  </div>\n  <div *ngIf=\"currentRecord.name !== null\" class=\"content\">\n    <div>\n      <div>\n        <div class=\"diseaseTitle\">\n            <p class=\"bigger\"><span>名称:&nbsp;</span>{{currentRecord.name}}</p>          \n        </div>\n        <div class=\"intro\" >\n          <br>\n          <p><span>多发群体:&nbsp;</span>狗、纯种狗/警犬多发</p>\n          <br>          \n          <p><span>常见症状:&nbsp;</span> 犬瘟热症状初期狗的体温高达39．5～41摄氏度，食欲不振，精神沉郁，\n            眼鼻流出水样分泌物，打喷嚏，有腹泻。在以后2～14天内再次出现体温升高，咳嗽，\n            有脓性鼻涕、脓性眼屎，这时候已经是犬瘟中期了。同时继发胃肠道疾病，呕吐、拉稀，食欲废绝。\n            精神高度沉郁，嗜睡。犬瘟热发病后期就会出现典型的神经症状，口吐白沫，抽搐，此时比较难治，主要看照料方法。\n          </p>\n          <br>          \n          <p><span>传染性:&nbsp;</span> 有传染性、高</p>\n          <br>          \n          <p><span>传播途径:&nbsp;</span>空气、接触、病犬分泌物/排泄物等</p>\n          <br>          \n          <p><span>死亡率:&nbsp;</span>80%以上</p>\n        </div>\n        <div class=\"imageandvideo\">\n            <img [src]=\"coverPic\" class=\"image\" (click)=\"onShowPic()\">\n            <app-big-pic [pictures] = \"pictures\"></app-big-pic>\n            <video class=\"video\" width=\"300\" height=\"250\" src=\"../../assets/videos/mango.MP4\" controls=\"controls\"></video>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"categories\">\n  <h2 class=\"title\">病例目录</h2>\n  <div *ngFor=\"let parent of nodes\" class=\"parent\">\n    <span (click)=\"parent.isExpanded = !parent.isExpanded;\">\n      <i [ngClass]=\"{'fa-caret-down' : parent.isExpanded, 'fa-caret-right' : !parent.isExpanded }\" class=\"fa large\"></i>&nbsp;{{parent.name}}\n    </span>\n    <div *ngIf=\"parent.isExpanded\">\n      <div *ngFor=\"let child of parent.children\" class=\"child\">\n        <span (click)=\"showDetail(parent, child)\"><i class=\"fa fa-user-md large\"></i>&nbsp;\n          {{child.name}}</span>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"recordContent\">\n  <div *ngIf=\"currentRecord.name === null\">\n    <img src=\"../../assets/images/medicalRecord/nullrecord.jpeg\" class=\"null-record-image\"/>\n    <div class=\"tip\">\n      <h2>请选择您想要学习的病例</h2>\n    </div>\n  </div>\n  <div *ngIf=\"currentRecord.name !== null\" class=\"content\">\n    <div>\n      <div>\n        <div class=\"diseaseTitle\">\n            <p class=\"bigger\"><span>名称:&nbsp;</span>{{currentRecord.name}}</p>          \n        </div>\n        <div class=\"intro\" >\n          <br>\n          <p><span>多发群体:&nbsp;</span>狗、纯种狗/警犬多发</p>\n          <br>          \n          <p><span>常见症状:&nbsp;</span> 犬瘟热症状初期狗的体温高达39．5～41摄氏度，食欲不振，精神沉郁，\n            眼鼻流出水样分泌物，打喷嚏，有腹泻。在以后2～14天内再次出现体温升高，咳嗽，\n            有脓性鼻涕、脓性眼屎，这时候已经是犬瘟中期了。同时继发胃肠道疾病，呕吐、拉稀，食欲废绝。\n            精神高度沉郁，嗜睡。犬瘟热发病后期就会出现典型的神经症状，口吐白沫，抽搐，此时比较难治，主要看照料方法。\n          </p>\n          <br>          \n          <p><span>传染性:&nbsp;</span> 有传染性、高</p>\n          <br>          \n          <p><span>传播途径:&nbsp;</span>空气、接触、病犬分泌物/排泄物等</p>\n          <br>          \n          <p><span>死亡率:&nbsp;</span>80%以上</p>\n        </div>\n        <div class=\"imageandvideo\">\n            <img [src]=\"coverPic\" class=\"image\" (click)=\"onShowPic()\">\n            <app-big-pic></app-big-pic>\n            <video class=\"video\" width=\"300\" height=\"250\" src=\"../../assets/videos/mango.MP4\" controls=\"controls\"></video>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -396,18 +413,19 @@ var MedicalRecordComponent = (function () {
             console.log(parent, child);
             _this.currentRecord = child;
         };
-        this.pictures = [
-            "../../assets/images/cat2.jpg",
-            "../../assets/images/cat1.jpg"
-        ];
-        this.coverPic = this.pictures[0];
     }
     MedicalRecordComponent.prototype.onShowPic = function () {
+        console.log(this.bigPic);
+        this.bigPic.pictures = [""];
+        this.bigPic.pageCount = 0;
         this.bigPic.showPic();
     };
     MedicalRecordComponent.prototype.ngOnInit = function () {
         this.currentRecord = {
-            "name": null
+            name: null,
+            id: null,
+            children: null,
+            isExpanded: null
         };
     };
     __decorate([
@@ -470,26 +488,27 @@ var MedicalRecordModule = (function () {
 
 /***/ }),
 
-/***/ "./src/app/online-test/countdown/countdown.component.html":
+/***/ "./src/app/online-test/collection/collection.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<span class=\"time_show\">{{hour}}:{{minute}}:{{second}}</span>\n<!-- <span class=\"time_show\">{{startTime}}</span>-->\n<!-- <span class=\"time_show\">{{endDate}}</span> -->\n<!-- <span class=\"time_show\">{{diff}}</span> -->"
+module.exports = "<div class=\"em_main\">\n    <div class=\"ec_sidel\">\n        <div class=\"golbal_side\">\n            <div class=\"Navigation\">\n              <a class=\"ep_sidel_a ep_to_choose\" href=\"/mistake\">\n                <img class=\"ep_img\" src=\"../../../assets/images/exam/wrongCollection.png\">\n                <span class=\"ec_sa_span\">我的错题</span>\n              </a>\n              <a class=\"ep_sidel_a ep_active\">\n                <img class=\"ep_img\" src=\"../../../assets/images/exam/fork.png\">\n                <span class=\"ec_sa_span\">我的收藏</span>\n              </a>\n            </div>\n        </div>\n    </div>\n    <div class=\"ec_sider\" *ngFor=\"let parent of CollectionList\">\n        <div class=\"ep_topic\">\n            <div class=\"ep_t_topic\">\n                <div class=\"ep_tt_num\">{{parent.id}}</div>\n                <div class=\"ep_tt_topic pading\">【{{parent.question.type}}】</div>\n                <div class=\"pading\"><span>{{parent.question.subject}}</span></div>\n            </div>\n            <ul class=\"ep_t_ul\" *ngFor=\"let child of parent.question.options\">\n            <li>\n                <label>\n                    <b>{{child.id}}.</b><p>{{child.content}}</p>                                \n                </label>\n            </li>\n            </ul>\n            <div class=\"eh_t_solution\">\n                <div class=\"eh_ts_a\">\n                      <div class=\"eh_uanswer\">\n                          <img class=\"em_icon\" src=\"../../../assets/images/exam/correct.png\">\n                          <span>正确答案：\n                              <b>{{parent.question.answer}}</b>\n                          </span>\n                      </div>\n                </div>\n                <div class=\"eh_ts_s\">\n                    <a (click)=\"manageCollection(parent.id)\">取消收藏</a>\n                    <a (click)=\"viewSolution(parent.id)\" [class.a_active]=\"parent.showSolution===true\">解析</a>\n                </div>\n            </div>\n            <div class=\"eh_t_resolve\" [class.active]=\"parent.showSolution===true\">\n                <div class=\"eh_resolve_nexist\">{{parent.question.solution}}</div>\n            </div>\n        </div>\n    </div>\n  </div>\n  "
 
 /***/ }),
 
-/***/ "./src/app/online-test/countdown/countdown.component.scss":
+/***/ "./src/app/online-test/collection/collection.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "@charset \"UTF-8\";\n.time_show {\n  width: 160px;\n  float: left;\n  text-align: center;\n  font-size: 16px;\n  font-family: 微软雅黑;\n  margin-top: -9px; }\n"
+module.exports = "@charset \"UTF-8\";\n.em_main {\n  width: 980px;\n  margin: 0 auto;\n  margin-top: 15px;\n  overflow: hidden; }\n.ec_sidel {\n  width: 162px;\n  float: left;\n  position: relative; }\n.ec_sider {\n  width: 802px;\n  float: right; }\n.Navigation {\n  width: 160px;\n  margin-bottom: 20px;\n  overflow: hidden;\n  background-color: #fff; }\n.golbal_side {\n  position: fixed;\n  z-index: 1000; }\n.ep_sidel_a {\n  color: #ADADAD;\n  height: 119px;\n  cursor: default;\n  background-color: #BEBEBE;\n  float: left;\n  width: 160px;\n  background: -webkit-linear-gradient(top, #fcfcfc, #f5f4f4);\n  text-shadow: 1px 1px 0 #fff; }\n.ep_to_choose:hover {\n  background: #b9b8b8; }\n.ec_sa_span {\n  width: 160px;\n  float: left;\n  text-align: center;\n  font-size: 16px;\n  font-family: 微软雅黑;\n  margin-top: -9px; }\n.ep_img {\n  width: 55px;\n  height: 55px;\n  margin-left: 48px;\n  margin-bottom: 12px;\n  margin-top: 12px; }\n.ep_topic {\n  width: 796px;\n  overflow: hidden;\n  margin-bottom: 20px;\n  border: solid 1px #d9d9d9; }\n.ep_t_topic {\n  padding: 7px 0;\n  background: #eee;\n  overflow: hidden; }\n.ep_tt_num {\n  color: #97b7cd;\n  font-size: 30px;\n  font-family: 'Verdana';\n  padding: 0 8px 0 14px;\n  float: left; }\n.ep_tt_topic {\n  color: #333333;\n  font-size: 14px;\n  font-family: 宋体;\n  line-height: 24px;\n  float: left; }\n.ep_t_ul {\n  list-style-position: inside;\n  margin-top: 2%;\n  padding-left: 10px; }\n.ep_t_ul li {\n    margin-bottom: 10px; }\n.ep_t_ul li b {\n      display: inline-block;\n      padding-right: 5px;\n      font-size: 14px;\n      font-family: 'Arial';\n      color: #333; }\n.ep_t_ul li p {\n      display: inline; }\n.pading {\n  padding: 7px 0; }\n.eh_t_solution {\n  padding: 15px 0 12px 9px;\n  overflow: hidden;\n  border-top: dashed 1px #bbb; }\n.eh_answer {\n  overflow: hidden;\n  float: left;\n  width: 201px; }\n.eh_answer span {\n    height: 30px;\n    line-height: 30px;\n    float: left;\n    padding-left: 7px;\n    font-size: 14px;\n    color: #555; }\n.eh_answer span b {\n      font-family: 'Arial';\n      font-size: 16px;\n      color: #cc0000; }\n.eh_ts_a {\n  float: left;\n  overflow: hidden; }\n.em_icon {\n  float: left;\n  width: 30x;\n  height: 30px; }\n.eh_uanswer {\n  float: left; }\n.eh_uanswer span {\n    height: 30px;\n    line-height: 30px;\n    float: left;\n    padding-left: 7px;\n    font-size: 14px;\n    color: #555; }\n.eh_uanswer span b {\n      color: #339900; }\n.eh_t_resolve {\n  padding: 14px 23px 9px 11px;\n  border-top: dashed 1px #bbb;\n  display: none; }\n.eh_t_resolve span {\n    margin-bottom: 7px; }\n.eh_resolve_nexist {\n  padding-bottom: 22px;\n  color: #999; }\n.eh_ts_s {\n  float: right;\n  padding-right: 5px; }\n.eh_ts_s a {\n    cursor: pointer;\n    padding: 6px 8px;\n    background: #f1f1f1;\n    color: #545454;\n    border: solid 1px #ddd;\n    border-radius: 2px;\n    margin-left: 6px;\n    display: inline; }\n.eh_ts_s a:hover {\n    background-color: #03a9f4;\n    color: #fff; }\n.eh_ts_s .a_active {\n    color: #03a9f4; }\n.active {\n  display: block; }\n.ep_active {\n  color: #fff;\n  text-decoration: none;\n  text-shadow: 0px 0px 0 #fff;\n  background: #64a2cd; }\n"
 
 /***/ }),
 
-/***/ "./src/app/online-test/countdown/countdown.component.ts":
+/***/ "./src/app/online-test/collection/collection.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountdownComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CollectionComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__ = __webpack_require__("./src/app/shared/service/data.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -500,45 +519,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var CountdownComponent = (function () {
-    function CountdownComponent() {
-    }
-    Object.defineProperty(CountdownComponent.prototype, "diff", {
-        get: function () {
-            return this.time_diff;
-        },
-        set: function (val) {
-            this.time_diff = Math.floor(val / 1000);
-            this.hour = Math.floor(this.time_diff / 3600);
-            this.minute = Math.floor((this.time_diff % 3600) / 60);
-            this.second = (this.time_diff % 3600) % 60;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    CountdownComponent.prototype.ngAfterViewInit = function () {
+
+var CollectionComponent = (function () {
+    function CollectionComponent(dataService) {
         var _this = this;
-        this.startTime = Date.now();
-        this.endDate = 3600000;
-        this.endDate += this.startTime;
-        this.timer = setInterval(function () {
-            _this.diff = _this.endDate - Date.now();
-        }, 1000);
+        this.dataService = dataService;
+        this.dataService.getCollection()
+            .subscribe(function (data) { return _this.CollectionList = data; });
+    }
+    CollectionComponent.prototype.ngOnInit = function () {
     };
-    CountdownComponent.prototype.ngOnDestroy = function () {
-        if (this.timer) {
-            clearInterval(this.timer);
-        }
+    CollectionComponent.prototype.viewSolution = function (id) {
+        this.CollectionList[id - 1].showSolution = !this.CollectionList[id - 1].showSolution;
     };
-    CountdownComponent = __decorate([
+    CollectionComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-countdown',
-            template: __webpack_require__("./src/app/online-test/countdown/countdown.component.html"),
-            styles: [__webpack_require__("./src/app/online-test/countdown/countdown.component.scss")]
+            selector: 'app-collection',
+            template: __webpack_require__("./src/app/online-test/collection/collection.component.html"),
+            styles: [__webpack_require__("./src/app/online-test/collection/collection.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
-    ], CountdownComponent);
-    return CountdownComponent;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__["a" /* DataService */]])
+    ], CollectionComponent);
+    return CollectionComponent;
 }());
 
 
@@ -548,14 +550,14 @@ var CountdownComponent = (function () {
 /***/ "./src/app/online-test/exam/exam.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"em_main\">\n    <div class=\"ec_sidel\">\n        <div class=\"golbal_side\">\n            <div class=\"Navigation\">\n                <span class=\"ep_sidel_span\">\n                    <li class=\"ec_title\">距离考试结束还有：</li>\n                    <app-countdown></app-countdown>\n                </span>\n                <a class=\"ep_sidel_a\">\n                     <img class=\"ep_img\" src=\"./../../assets/images/exam/submit.png\" alt=\"\">\n                     <span class=\"ec_sa_span\">立即交卷</span>\n                </a>\n            </div>\n        </div>\n    </div>\n    <div class=\"ec_sider\" *ngFor=\"let parent of QuestionLists\">\n        <div class=\"ep_topic\">\n            <div class=\"ep_t_topic\">\n                <div class=\"ep_tt_num\">{{parent.id}}</div>\n                <div class=\"ep_tt_topic pading\">【{{parent.type}}】</div>\n                <div class=\"pading\"><span>{{parent.subject}}</span></div>\n            </div>\n            <ul class=\"ep_t_ul\" *ngFor=\"let child of parent.options\">\n            <li>\n                <label>\n                    <input class=\"ep_radio\" name=\"{{parent.id}}\" type=\"radio\" value=\"A\">\n                    <b>{{child.id}}.</b><p>{{child.content}}</p>                                \n                </label>\n            </li>\n            </ul>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"em_main\">\n    <div class=\"ec_sidel\">\n        <div class=\"golbal_side\">\n            <div class=\"Navigation\">\n                <span class=\"ep_sidel_span\">\n                    <li class=\"ec_title\">距离考试结束还有：</li>\n                    <span class=\"time_show\">{{hour}}:{{minute}}:{{second}}</span>\n                </span>\n                <a class=\"ep_sidel_a\">\n                     <img class=\"ep_img\" src=\"./../../assets/images/exam/submit.png\" alt=\"\">\n                     <span class=\"ec_sa_span\">立即交卷</span>\n                </a>\n            </div>\n        </div>\n    </div>\n    <div class=\"ec_sider\" *ngFor=\"let parent of QuestionLists\">\n        <div class=\"ep_topic\">\n            <div class=\"ep_t_topic\">\n                <div class=\"ep_tt_num\">{{parent.id}}</div>\n                <div class=\"ep_tt_topic pading\">【{{parent.type}}】</div>\n                <div class=\"pading\"><span>{{parent.subject}}</span></div>\n            </div>\n            <ul class=\"ep_t_ul\" *ngFor=\"let child of parent.options\">\n            <li>\n                <label>\n                    <input class=\"ep_radio\" name=\"{{parent.id}}\" type=\"radio\" value=\"A\">\n                    <b>{{child.id}}.</b><p>{{child.content}}</p>                                \n                </label>\n            </li>\n            </ul>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
 /***/ "./src/app/online-test/exam/exam.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "@charset \"UTF-8\";\n.em_main {\n  width: 980px;\n  margin: 0 auto;\n  margin-top: 15px;\n  overflow: hidden; }\n.ec_sidel {\n  width: 162px;\n  float: left;\n  position: relative; }\n.golbal_side {\n  position: fixed;\n  z-index: 1000; }\n.Navigation {\n  width: 160px;\n  margin-bottom: 20px;\n  overflow: hidden;\n  background-color: #fff; }\n.ec_card {\n  width: 160px;\n  min-height: 100px;\n  border: 1px solid #bec2c5;\n  background: #f0f0f0;\n  font-family: 'Microsoft Yahei';\n  padding-bottom: 20px; }\n.ec_ca_cpt {\n  height: 20px;\n  line-height: 20px;\n  padding: 8px;\n  font-size: 16px;\n  color: #838383; }\n.ep_sidel_span {\n  color: #999;\n  height: 119px;\n  cursor: default;\n  background: #f0f0f0;\n  float: left;\n  width: 160px;\n  color: #555;\n  text-shadow: 1px 1px 0 #fff;\n  border-radius: 15px 15px 0px 0px; }\n.ep_sidel_a {\n  color: #999;\n  height: 119px;\n  cursor: default;\n  background-color: #BEBEBE;\n  float: left;\n  width: 160px;\n  color: #555;\n  text-shadow: 1px 1px 0 #fff;\n  border-radius: 0px 0px 15px 15px; }\n.ep_sidel_a:hover {\n  background: #6C6C6C; }\n.ec_sa_span {\n  width: 160px;\n  float: left;\n  text-align: center;\n  font-size: 16px;\n  font-family: 微软雅黑;\n  margin-top: -9px; }\n.ec_sider {\n  width: 802px;\n  float: right; }\n.ep_topic {\n  width: 796px;\n  overflow: hidden;\n  margin-bottom: 20px;\n  border: solid 1px #d9d9d9; }\n.ep_t_topic {\n  padding: 7px 0;\n  background: #eee;\n  overflow: hidden; }\n.ep_tt_num {\n  color: #97b7cd;\n  font-size: 30px;\n  font-family: 'Verdana';\n  padding: 0 8px 0 14px;\n  float: left; }\n.ep_tt_topic {\n  color: #333333;\n  font-size: 14px;\n  font-family: 宋体;\n  line-height: 24px;\n  float: left; }\n.ep_t_ul {\n  list-style-position: inside;\n  margin-top: 2%; }\n.ep_t_ul li {\n    margin-bottom: 10px; }\n.ep_t_ul li b {\n      display: inline-block;\n      padding-right: 5px;\n      font-size: 14px;\n      font-family: 'Arial';\n      color: #333; }\n.ep_t_ul li p {\n      display: inline; }\n.ep_radio {\n  margin-left: 3%;\n  display: inline-block;\n  margin-right: 13px;\n  vertical-align: middle;\n  margin-top: -3px; }\n.pading {\n  padding: 7px 0; }\n.ep_img {\n  width: 55px;\n  height: 55px;\n  margin-left: 48px;\n  margin-bottom: 12px;\n  margin-top: 12px; }\n.ec_title {\n  width: 160px;\n  float: left;\n  text-align: center;\n  color: #000;\n  font-size: 16px;\n  font-family: 微软雅黑;\n  margin-top: 25px;\n  margin-bottom: 30px; }\n"
+module.exports = "@charset \"UTF-8\";\n.em_main {\n  width: 980px;\n  margin: 0 auto;\n  margin-top: 15px;\n  overflow: hidden; }\n.ec_sidel {\n  width: 162px;\n  float: left;\n  position: relative; }\n.ec_sider {\n  width: 802px;\n  float: right; }\n.golbal_side {\n  position: fixed;\n  z-index: 1000; }\n.Navigation {\n  width: 160px;\n  margin-bottom: 20px;\n  overflow: hidden;\n  background-color: #fff; }\n.ec_card {\n  width: 160px;\n  min-height: 100px;\n  border: 1px solid #bec2c5;\n  background: #f0f0f0;\n  font-family: 'Microsoft Yahei';\n  padding-bottom: 20px; }\n.ec_ca_cpt {\n  height: 20px;\n  line-height: 20px;\n  padding: 8px;\n  font-size: 16px;\n  color: #838383; }\n.ep_sidel_span {\n  color: #999;\n  height: 119px;\n  cursor: default;\n  background: #f0f0f0;\n  float: left;\n  width: 160px;\n  color: #555;\n  text-shadow: 1px 1px 0 #fff;\n  border-radius: 15px 15px 0px 0px; }\n.ep_sidel_a {\n  color: #999;\n  height: 119px;\n  cursor: default;\n  background-color: #BEBEBE;\n  float: left;\n  width: 160px;\n  color: #555;\n  text-shadow: 1px 1px 0 #fff;\n  border-radius: 0px 0px 15px 15px; }\n.ep_sidel_a:hover {\n  background: #6C6C6C; }\n.ec_sa_span {\n  width: 160px;\n  float: left;\n  text-align: center;\n  font-size: 16px;\n  font-family: 微软雅黑;\n  margin-top: -9px; }\n.ep_topic {\n  width: 796px;\n  overflow: hidden;\n  margin-bottom: 20px;\n  border: solid 1px #d9d9d9; }\n.ep_t_topic {\n  padding: 7px 0;\n  background: #eee;\n  overflow: hidden; }\n.ep_tt_num {\n  color: #97b7cd;\n  font-size: 30px;\n  font-family: 'Verdana';\n  padding: 0 8px 0 14px;\n  float: left; }\n.ep_tt_topic {\n  color: #333333;\n  font-size: 14px;\n  font-family: 宋体;\n  line-height: 24px;\n  float: left; }\n.ep_t_ul {\n  list-style-position: inside;\n  margin-top: 2%; }\n.ep_t_ul li {\n    margin-bottom: 10px; }\n.ep_t_ul li b {\n      display: inline-block;\n      padding-right: 5px;\n      font-size: 14px;\n      font-family: 'Arial';\n      color: #333; }\n.ep_t_ul li p {\n      display: inline; }\n.ep_radio {\n  margin-left: 3%;\n  display: inline-block;\n  margin-right: 13px;\n  vertical-align: middle;\n  margin-top: -3px; }\n.pading {\n  padding: 7px 0; }\n.ep_img {\n  width: 55px;\n  height: 55px;\n  margin-left: 48px;\n  margin-bottom: 12px;\n  margin-top: 12px; }\n.ec_title {\n  width: 160px;\n  float: left;\n  text-align: center;\n  color: #000;\n  font-size: 16px;\n  font-family: 微软雅黑;\n  margin-top: 25px;\n  margin-bottom: 30px; }\n.time_show {\n  width: 160px;\n  float: left;\n  text-align: center;\n  font-size: 16px;\n  font-family: 微软雅黑;\n  margin-top: -9px; }\n"
 
 /***/ }),
 
@@ -565,7 +567,7 @@ module.exports = "@charset \"UTF-8\";\n.em_main {\n  width: 980px;\n  margin: 0 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mock_exam_questions__ = __webpack_require__("./src/app/online-test/exam/mock-exam-questions.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__ = __webpack_require__("./src/app/shared/service/data.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -578,10 +580,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ExamComponent = (function () {
-    function ExamComponent() {
-        this.QuestionLists = __WEBPACK_IMPORTED_MODULE_1__mock_exam_questions__["a" /* Questions */];
+    function ExamComponent(dataService) {
+        var _this = this;
+        this.dataService = dataService;
+        this.dataService.getQuestions()
+            .subscribe(function (data) { return _this.QuestionLists = data; });
     }
     ExamComponent.prototype.ngOnInit = function () {
+    };
+    Object.defineProperty(ExamComponent.prototype, "diff", {
+        get: function () {
+            return this.time_diff;
+        },
+        set: function (val) {
+            this.time_diff = Math.floor(val / 1000);
+            this.hour = Math.floor(this.time_diff / 3600);
+            this.minute = Math.floor((this.time_diff % 3600) / 60);
+            this.second = (this.time_diff % 3600) % 60;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ExamComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.startTime = Date.now();
+        this.endDate = 3600000;
+        this.endDate += this.startTime;
+        this.timer = setInterval(function () {
+            _this.diff = _this.endDate - Date.now();
+        }, 1000);
+    };
+    ExamComponent.prototype.ngOnDestroy = function () {
+        if (this.timer) {
+            clearInterval(this.timer);
+        }
     };
     ExamComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -589,7 +621,7 @@ var ExamComponent = (function () {
             template: __webpack_require__("./src/app/online-test/exam/exam.component.html"),
             styles: [__webpack_require__("./src/app/online-test/exam/exam.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__["a" /* DataService */]])
     ], ExamComponent);
     return ExamComponent;
 }());
@@ -598,15 +630,64 @@ var ExamComponent = (function () {
 
 /***/ }),
 
-/***/ "./src/app/online-test/exam/mock-exam-questions.ts":
+/***/ "./src/app/online-test/mistake/mistake.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"em_main\">\n  <div class=\"ec_sidel\">\n      <div class=\"golbal_side\">\n          <div class=\"Navigation\">\n            <a class=\"ep_sidel_a ep_active\" >\n              <img class=\"ep_img\" src=\"../../../assets/images/exam/wrongCollection.png\">\n              <span class=\"ec_sa_span\">我的错题</span>\n            </a>\n            <a class=\"ep_sidel_a ep_to_choose\" href=\"/collection\">\n              <img class=\"ep_img\" src=\"../../../assets/images/exam/fork.png\">\n              <span class=\"ec_sa_span\">我的收藏</span>\n            </a>\n          </div>\n      </div>\n  </div>\n  <div class=\"ec_sider\" *ngFor=\"let parent of WrongList\">\n      <div class=\"ep_topic\">\n          <div class=\"ep_t_topic\">\n              <div class=\"ep_tt_num\">{{parent.id}}</div>\n              <div class=\"ep_tt_topic pading\">【{{parent.question.type}}】</div>\n              <div class=\"pading\"><span>{{parent.question.subject}}</span></div>\n          </div>\n          <ul class=\"ep_t_ul\" *ngFor=\"let child of parent.question.options\">\n          <li>\n              <label>\n                  <b>{{child.id}}.</b><p>{{child.content}}</p>                                \n              </label>\n          </li>\n          </ul>\n          <div class=\"eh_t_solution\">\n              <div class=\"eh_ts_a\">\n                    <div class=\"eh_answer\">\n                        <img class=\"em_icon\" src=\"../../../assets/images/exam/wrong.png\">\n                        <span>您的答案：\n                            <b>{{parent.wrongAnswer}}</b>\n                        </span>\n                    </div>\n              </div>\n              <div class=\"eh_uanswer\">\n                    <span>正确答案：\n                        <b>{{parent.question.answer}}</b>\n                    </span>\n              </div>\n              <div class=\"eh_ts_s\">\n                  <a (click)=\"manageCollection(parent.id)\" [class.hide]=\"parent.collectStatus===true\" [class.active]=\"parent.collectStatus===false\">添加收藏</a>\n                  <a (click)=\"manageCollection(parent.id)\" [class.hide]=\"parent.collectStatus===false\" [class.active]=\"parent.collectStatus===true\">取消收藏</a>\n                  <a (click)=\"viewSolution(parent.id)\" [class.a_active]=\"parent.showSolution===true\">解析</a>\n              </div>\n          </div>\n          <div class=\"eh_t_resolve\" [class.active]=\"parent.showSolution===true\">\n              <div class=\"eh_resolve_nexist\">{{parent.question.solution}}</div>\n          </div>\n      </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/online-test/mistake/mistake.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = "@charset \"UTF-8\";\n.em_main {\n  width: 980px;\n  margin: 0 auto;\n  margin-top: 15px;\n  overflow: hidden; }\n.ec_sidel {\n  width: 162px;\n  float: left;\n  position: relative; }\n.ec_sider {\n  width: 802px;\n  float: right; }\n.Navigation {\n  width: 160px;\n  margin-bottom: 20px;\n  overflow: hidden;\n  background-color: #fff; }\n.golbal_side {\n  position: fixed;\n  z-index: 1000; }\n.ep_sidel_a {\n  color: #999;\n  height: 119px;\n  cursor: default;\n  background-color: #BEBEBE;\n  float: left;\n  width: 160px;\n  background: -webkit-linear-gradient(top, #fcfcfc, #f5f4f4);\n  text-shadow: 1px 1px 0 #fff; }\n.ep_sidel_a:hover {\n  background: #b9b8b8; }\n.ec_sa_span {\n  width: 160px;\n  float: left;\n  text-align: center;\n  font-size: 16px;\n  font-family: 微软雅黑;\n  margin-top: -9px; }\n.ep_img {\n  width: 55px;\n  height: 55px;\n  margin-left: 48px;\n  margin-bottom: 12px;\n  margin-top: 12px; }\n.ep_topic {\n  width: 796px;\n  overflow: hidden;\n  margin-bottom: 20px;\n  border: solid 1px #d9d9d9; }\n.ep_t_topic {\n  padding: 7px 0;\n  background: #eee;\n  overflow: hidden; }\n.ep_tt_num {\n  color: #97b7cd;\n  font-size: 30px;\n  font-family: 'Verdana';\n  padding: 0 8px 0 14px;\n  float: left; }\n.ep_tt_topic {\n  color: #333333;\n  font-size: 14px;\n  font-family: 宋体;\n  line-height: 24px;\n  float: left; }\n.ep_t_ul {\n  list-style-position: inside;\n  margin-top: 2%;\n  padding-left: 10px; }\n.ep_t_ul li {\n    margin-bottom: 10px; }\n.ep_t_ul li b {\n      display: inline-block;\n      padding-right: 5px;\n      font-size: 14px;\n      font-family: 'Arial';\n      color: #333; }\n.ep_t_ul li p {\n      display: inline; }\n.pading {\n  padding: 7px 0; }\n.eh_t_solution {\n  padding: 15px 0 12px 9px;\n  overflow: hidden;\n  border-top: dashed 1px #bbb; }\n.eh_answer {\n  overflow: hidden;\n  float: left;\n  width: 201px; }\n.eh_answer span {\n    height: 30px;\n    line-height: 30px;\n    float: left;\n    padding-left: 7px;\n    font-size: 14px;\n    color: #555; }\n.eh_answer span b {\n      font-family: 'Arial';\n      font-size: 16px;\n      color: #cc0000; }\n.eh_ts_a {\n  float: left;\n  overflow: hidden; }\n.em_icon {\n  float: left;\n  width: 30x;\n  height: 30px; }\n.eh_uanswer {\n  float: left;\n  margin-left: 50px; }\n.eh_uanswer span {\n    height: 30px;\n    line-height: 30px;\n    float: left;\n    padding-left: 7px;\n    font-size: 14px;\n    color: #555; }\n.eh_uanswer span b {\n      color: #339900; }\n.eh_t_resolve {\n  padding: 14px 23px 9px 11px;\n  border-top: dashed 1px #bbb;\n  display: none; }\n.eh_t_resolve span {\n    margin-bottom: 7px; }\n.eh_resolve_nexist {\n  padding-bottom: 22px;\n  color: #999; }\n.eh_ts_s {\n  float: right;\n  padding-right: 5px; }\n.eh_ts_s a {\n    cursor: pointer;\n    padding: 6px 8px;\n    background: #f1f1f1;\n    color: #545454;\n    border: solid 1px #ddd;\n    border-radius: 2px;\n    margin-left: 6px;\n    display: inline; }\n.eh_ts_s a:hover {\n    background-color: #03a9f4;\n    color: #fff; }\n.eh_ts_s .a_active {\n    color: #03a9f4; }\n.active {\n  display: block; }\n.hide {\n  position: absolute;\n  visibility: hidden; }\n.ep_active {\n  color: #fff;\n  text-decoration: none;\n  text-shadow: 0px 0px 0 #fff;\n  background: #64a2cd; }\n"
+
+/***/ }),
+
+/***/ "./src/app/online-test/mistake/mistake.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Questions; });
-var Questions = [
-    { id: 1, type: '单选', subject: '宠物狗能不能巧克力？', options: [{ id: 'A', content: '能' }, { id: 'B', content: '不能' }], answer: 'B' },
-    { id: 2, type: '单选', subject: '世界上最聪明的狗是哪个品种？', options: [{ id: 'A', content: '哈士奇' }, { id: 'B', content: '阿拉斯加犬' }, { id: 'C', content: '边境牧羊犬' }, { id: 'D', content: '德国牧羊犬' }], answer: 'C' }
-];
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MistakeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__ = __webpack_require__("./src/app/shared/service/data.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MistakeComponent = (function () {
+    function MistakeComponent(dataService) {
+        var _this = this;
+        this.dataService = dataService;
+        this.dataService.getMistakes()
+            .subscribe(function (data) { return _this.WrongList = data; });
+    }
+    MistakeComponent.prototype.ngOnInit = function () {
+    };
+    MistakeComponent.prototype.viewSolution = function (id) {
+        this.WrongList[id - 1].showSolution = !this.WrongList[id - 1].showSolution;
+    };
+    MistakeComponent.prototype.manageCollection = function (id) {
+        this.WrongList[id - 1].collectStatus = !this.WrongList[id - 1].collectStatus;
+    };
+    MistakeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-mistake',
+            template: __webpack_require__("./src/app/online-test/mistake/mistake.component.html"),
+            styles: [__webpack_require__("./src/app/online-test/mistake/mistake.component.scss")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__["a" /* DataService */]])
+    ], MistakeComponent);
+    return MistakeComponent;
+}());
+
 
 
 /***/ }),
@@ -620,13 +701,17 @@ var Questions = [
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_exam_component__ = __webpack_require__("./src/app/online-test/exam/exam.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__practice_practice_component__ = __webpack_require__("./src/app/online-test/practice/practice.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__countdown_countdown_component__ = __webpack_require__("./src/app/online-test/countdown/countdown.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mistake_mistake_component__ = __webpack_require__("./src/app/online-test/mistake/mistake.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__collection_collection_component__ = __webpack_require__("./src/app/online-test/collection/collection.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_service_data_service__ = __webpack_require__("./src/app/shared/service/data.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -643,7 +728,11 @@ var OnlineTestModule = (function () {
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__exam_exam_component__["a" /* ExamComponent */],
                 __WEBPACK_IMPORTED_MODULE_3__practice_practice_component__["a" /* PracticeComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__countdown_countdown_component__["a" /* CountdownComponent */]
+                __WEBPACK_IMPORTED_MODULE_4__mistake_mistake_component__["a" /* MistakeComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__collection_collection_component__["a" /* CollectionComponent */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_6__shared_service_data_service__["a" /* DataService */]
             ],
             exports: [__WEBPACK_IMPORTED_MODULE_3__practice_practice_component__["a" /* PracticeComponent */]]
         })
@@ -655,59 +744,17 @@ var OnlineTestModule = (function () {
 
 /***/ }),
 
-/***/ "./src/app/online-test/practice/mock-practice-items.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ITEMS; });
-var ITEMS = [
-    { id: 1, name: '官方练习-1', items: [{ id: 1, name: 'Part one', level: 'easy' }, { id: 2, name: 'Part two', level: 'easy' }, { id: 3, name: 'Part hard', level: 'easy' }] },
-    { id: 2, name: '官方练习-2', items: [{ id: 1, name: 'Part one', level: 'normal' }, { id: 2, name: 'Part two', level: 'normal' }, { id: 3, name: 'Part hard', level: 'normal' }] },
-    { id: 3, name: '官方练习-3', items: [{ id: 1, name: 'Part one', level: 'hard' }, { id: 2, name: 'Part two', level: 'hard' }, { id: 3, name: 'Part hard', level: 'normal' }] }
-];
-
-
-/***/ }),
-
-/***/ "./src/app/online-test/practice/mock-practice-lists.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LISTS; });
-var LISTS = [
-    { id: 1, name: '顺序练习' },
-    { id: 2, name: '科目练习' }
-];
-
-
-/***/ }),
-
-/***/ "./src/app/online-test/practice/mock-practice-tabs.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TABS; });
-var TABS = [
-    { id: 1, name: '全部' },
-    { id: 2, name: '入门题目' },
-    { id: 3, name: '中等题目' },
-    { id: 4, name: '官方难题' }
-];
-
-
-/***/ }),
-
 /***/ "./src/app/online-test/practice/practice.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"all-see g-mod-shadow\">\n    <div class=\"tab-list g-clearfix\">\n      <li *ngFor=\"let list of lists\"\n        (click)=\"SelectList(list)\"><a [class.list-active]=\"list===OnSelectedList\" class=\"tab-links\">{{list.name}}</a></li>\n    </div>\n    <div class=\"filtrate-cont\">\n        <div class=\"filtrate-btn-cont\">\n          <div class=\"filtrate-msg\">难度选择：</div>\n          <div class=\"filtrate-btn\">\n              <li *ngFor=\"let tab of tabs\"\n              (click)=\"SelectTab(tab)\" style=\"display:inline;\">\n              <a [class.active]=\"tab===OnSelectedTab\" class=\"filtrate-links\">{{tab.name}}</a>\n          </li></div>\n        </div>\n    </div>\n    <div class=\"list-cont\" *ngFor=\"let parent of items\">\n        <div class=\"practice-list-cont\">\n            <div class=\"list-title-cont\">\n                <div class=\"list-title\">{{parent.name}}</div>\n            </div>\n            <div *ngFor=\"let child of parent.items\">\n              <div class=\"practice-list\">\n                <div class=\"practice-lists\">\n                <a class=\"practice-title\">{{child.name}}</a>\n                <div class=\"tab-cout\">\n                  <span class=\"type {{child.level}}\">{{child.level}}</span>\n                </div>\n                <div class=\"score_show\">\n                  <span class=\"score-num\">Last score: </span>\n                </div>\n                <i class=\"plan-icon practice-icon\">\n                  <img style=\"width: 25px;height: 25px;\" src=\"./../../assets/images/exam/practice.png\" alt=\"\">\n                </i>\n              </div>\n            </div>\n          </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"left-container\">\n    <div class=\"all-see g-mod-shadow\">\n        <div class=\"tab-list g-clearfix\">\n          <li *ngFor=\"let title of practiceTitles\"\n            (click)=\"SelectList(title)\"><a [class.list-active]=\"title===OnSelectedTitle\" class=\"tab-links\">{{title.name}}</a>\n          </li>\n          <a href=\"/mistake\" class=\"tab-links\">我的测试</a>\n        </div>\n        <div class=\"filtrate-cont\">\n            <div class=\"filtrate-btn-cont\">\n              <div class=\"filtrate-msg\">难度选择：</div>\n              <div class=\"filtrate-btn\">\n                  <li *ngFor=\"let tab of practiceTabs\"\n                  (click)=\"SelectTab(tab)\" style=\"display:inline;\">\n                  <a [class.active]=\"tab===OnSelectedTab\" class=\"filtrate-links\">{{tab.name}}</a>\n              </li></div>\n            </div>\n        </div>\n        <div class=\"list-cont\" *ngFor=\"let parent of practiceItems\">\n            <div class=\"practice-list-cont\">\n                <div class=\"list-title-cont\">\n                    <div class=\"list-title\">{{parent.name}}</div>\n                </div>\n                <div *ngFor=\"let child of parent.items\">\n                  <div class=\"practice-list\">\n                    <div class=\"practice-lists\">\n                    <a class=\"practice-title\">{{child.name}}</a>\n                    <div class=\"tab-cout\">\n                      <span class=\"type {{child.level}}\">{{child.level}}</span>\n                    </div>\n                    <div class=\"score_show\">\n                      <span class=\"score-num\">Last score: </span>\n                    </div>\n                    <a href=\"exam/{{parent.id}}\" class=\"plan-icon practice-icon\">\n                      <img style=\"width: 25px;height: 25px;\" src=\"./../../assets/images/exam/practice.png\" alt=\"\">\n                    </a>\n                  </div>\n                </div>\n              </div>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"right-container\">\n  <div class=\"rank-list-mod\">\n    <div class=\"rank-top-nav g-clearfix\">\n      <span class=\"rank-top\">排行榜</span>\n    </div>\n    <div class=\"rank-load-area g-clearfix\">\n        <div class=\"top-three\">\n          <div class=\"top-three-inbox\">\n            <span class=\"grade-tip top-one\">No.1</span>\n            <img src=\"./../../assets/images/exam/avatar.jpg\" alt=\"\">\n          </div>\n        </div>\n        <div class=\"top-three\">\n            <div class=\"top-three-inbox\">\n              <span class=\"grade-tip top-two\">No.2</span>\n              <img src=\"./../../assets/images/exam/avatar.jpg\" alt=\"\">\n            </div>\n          </div>\n          <div class=\"top-three\">\n              <div class=\"top-three-inbox\">\n                <span class=\"grade-tip top-three\">No.3</span>\n                <img src=\"./../../assets/images/exam/avatar.jpg\" alt=\"\">\n              </div>\n            </div>\n      </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "./src/app/online-test/practice/practice.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".practice-lists {\n  width: 240px;\n  height: 116px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  padding: 12px 16px;\n  border: 1px solid #D9D9D9;\n  border-radius: 2px;\n  background: #fff;\n  position: relative;\n  margin-right: 20px;\n  margin-bottom: 20px;\n  float: left;\n  cursor: pointer;\n  -webkit-transition: .3s all;\n  transition: .3s all; }\n\n.practice-title {\n  float: left;\n  clear: both;\n  font-size: 20px;\n  line-height: 28px;\n  margin-bottom: 8px; }\n\n.tab-cout {\n  width: 100%;\n  height: 20px;\n  margin-bottom: 12px;\n  overflow: hidden;\n  -webkit-transform: scale(0.9);\n          transform: scale(0.9);\n  margin-left: -10px; }\n\n.type {\n  height: 18px;\n  line-height: 18px;\n  border: 1px solid transparent;\n  font-size: 10px;\n  padding: 0 4px;\n  border-radius: 2px;\n  float: left;\n  margin-right: 8px; }\n\n.easy {\n  border-color: #FFD032;\n  color: #FFD032; }\n\n.normal {\n  border-color: #FF5809;\n  color: #FF5809; }\n\n.hard {\n  border-color: #FF0000;\n  color: #FF0000; }\n\na {\n  color: #333;\n  text-decoration: none;\n  outline: 0; }\n\na:hover {\n  color: #E0E0E0;\n  text-decoration: none; }\n\n.plan-icon {\n  width: 32px;\n  height: 32px;\n  background-position: -72px -16px;\n  position: absolute;\n  top: 16px;\n  right: 16px; }\n\n.main .practice-icon {\n  display: inline-block;\n  background-repeat: no-repeat; }\n\n.score_show {\n  overflow: hidden; }\n\n.score-num {\n  font-size: 18px;\n  color: #ADADAD;\n  line-height: 24px;\n  margin-right: 12px;\n  float: left; }\n\n.list-active {\n  color: #4C91FF;\n  padding-bottom: 2px;\n  border-bottom: 3px solid #4C91FF; }\n\n.tab-list {\n  width: 816px;\n  line-height: 28px;\n  border-bottom: 1px solid #ededef;\n  margin: 0 32px 20px; }\n\n.g-clearfix:after {\n  content: \"\";\n  height: 0;\n  overflow: hidden;\n  clear: both;\n  display: block;\n  visibility: hidden; }\n\n.tab-links {\n  font-size: 16px;\n  color: #666;\n  float: left;\n  margin-right: 32px;\n  line-height: 32px;\n  margin-bottom: -1px; }\n\n.filtrate-msg {\n  display: inline-block;\n  font-size: 14px;\n  line-height: 28px;\n  vertical-align: top; }\n\n.filtrate-btn {\n  display: inline-block;\n  font-size: 14px;\n  line-height: 28px;\n  vertical-align: top;\n  max-width: 90%;\n  margin-bottom: -8px; }\n\n.filtrate-links {\n  display: inline-block;\n  padding: 2px 8px;\n  margin-right: 12px;\n  margin-bottom: 8px;\n  line-height: 24px; }\n\n.filtrate-links.active {\n  background: #4C91FF;\n  border-radius: 2px;\n  color: #fff; }\n\n.all-see {\n  min-height: 800px;\n  background: #fff;\n  padding: 24px 0 60px;\n  position: relative;\n  margin-bottom: 20px; }\n\n.g-mod-shadow {\n  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);\n          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05); }\n\n.filtrate-cont {\n  margin: 0 32px 0px; }\n\n.filtrate-btn-cont {\n  margin-bottom: 16px;\n  width: 104%; }\n\n.list-cont {\n  overflow: hidden;\n  margin: 0px 32px; }\n\n.practice-list-cont {\n  margin-bottom: 40px;\n  overflow: hidden; }\n\n.list-title-cont {\n  height: 32px;\n  margin-bottom: 12px;\n  overflow: hidden; }\n\n.list-title {\n  float: left;\n  font-size: 24px;\n  color: #00448d;\n  line-height: 32px;\n  font-weight: 700; }\n\n.practice-list {\n  display: inline;\n  overflow: hidden; }\n\n.ec_sider {\n  width: 802px;\n  float: right; }\n\n.em_main {\n  width: 980px;\n  margin: 0 auto;\n  margin-top: 15px;\n  overflow: hidden; }\n"
+module.exports = ".left-container {\n  width: 880px;\n  float: left; }\n\n.right-container {\n  width: 280px;\n  float: right; }\n\n.practice-lists {\n  width: 240px;\n  height: 116px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  padding: 12px 16px;\n  border: 1px solid #D9D9D9;\n  border-radius: 2px;\n  background: #fff;\n  position: relative;\n  margin-right: 20px;\n  margin-bottom: 20px;\n  float: left;\n  cursor: pointer;\n  -webkit-transition: .3s all;\n  transition: .3s all; }\n\n.practice-title {\n  float: left;\n  clear: both;\n  font-size: 20px;\n  line-height: 28px;\n  margin-bottom: 8px; }\n\n.tab-cout {\n  width: 100%;\n  height: 20px;\n  margin-bottom: 12px;\n  overflow: hidden;\n  -webkit-transform: scale(0.9);\n          transform: scale(0.9);\n  margin-left: -10px; }\n\n.type {\n  height: 18px;\n  line-height: 18px;\n  border: 1px solid transparent;\n  font-size: 10px;\n  padding: 0 4px;\n  border-radius: 2px;\n  float: left;\n  margin-right: 8px; }\n\n.easy {\n  border-color: #FFD032;\n  color: #FFD032; }\n\n.normal {\n  border-color: #FF5809;\n  color: #FF5809; }\n\n.hard {\n  border-color: #FF0000;\n  color: #FF0000; }\n\na {\n  color: #333;\n  text-decoration: none;\n  outline: 0; }\n\na:hover {\n  color: #4C91FF;\n  text-decoration: none; }\n\n.plan-icon {\n  width: 32px;\n  height: 32px;\n  background-position: -72px -16px;\n  position: absolute;\n  top: 16px;\n  right: 16px; }\n\n.main .practice-icon {\n  display: inline-block;\n  background-repeat: no-repeat; }\n\n.score_show {\n  overflow: hidden; }\n\n.score-num {\n  font-size: 18px;\n  color: #ADADAD;\n  line-height: 24px;\n  margin-right: 12px;\n  float: left; }\n\n.list-active {\n  color: #4C91FF;\n  padding-bottom: 2px;\n  border-bottom: 3px solid #4C91FF; }\n\n.tab-list {\n  width: 816px;\n  line-height: 28px;\n  border-bottom: 1px solid #ededef;\n  margin: 0 32px 20px; }\n\n.g-clearfix:after {\n  content: \"\";\n  height: 0;\n  overflow: hidden;\n  clear: both;\n  display: block;\n  visibility: hidden; }\n\n.tab-links {\n  font-size: 16px;\n  color: #666;\n  float: left;\n  margin-right: 32px;\n  line-height: 32px;\n  margin-bottom: -1px; }\n\n.filtrate-msg {\n  display: inline-block;\n  font-size: 14px;\n  line-height: 28px;\n  vertical-align: top; }\n\n.filtrate-btn {\n  display: inline-block;\n  font-size: 14px;\n  line-height: 28px;\n  vertical-align: top;\n  max-width: 90%;\n  margin-bottom: -8px; }\n\n.filtrate-links {\n  display: inline-block;\n  padding: 2px 8px;\n  margin-right: 12px;\n  margin-bottom: 8px;\n  line-height: 24px; }\n\n.filtrate-links.active {\n  background: #4C91FF;\n  border-radius: 2px;\n  color: #fff; }\n\n.all-see {\n  min-height: 800px;\n  background: #fff;\n  padding: 24px 0 60px;\n  position: relative;\n  margin-bottom: 20px; }\n\n.g-mod-shadow {\n  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);\n          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05); }\n\n.filtrate-cont {\n  margin: 0 32px 0px; }\n\n.filtrate-btn-cont {\n  margin-bottom: 16px;\n  width: 104%; }\n\n.list-cont {\n  overflow: hidden;\n  margin: 0px 32px; }\n\n.practice-list-cont {\n  margin-bottom: 40px;\n  overflow: hidden; }\n\n.list-title-cont {\n  height: 32px;\n  margin-bottom: 12px;\n  overflow: hidden; }\n\n.list-title {\n  float: left;\n  font-size: 24px;\n  color: #00448d;\n  line-height: 32px;\n  font-weight: 700; }\n\n.practice-list {\n  display: inline;\n  overflow: hidden; }\n\n.ec_sider {\n  width: 802px;\n  float: right; }\n\n.em_main {\n  width: 980px;\n  margin: 0 auto;\n  margin-top: 15px;\n  overflow: hidden; }\n\n.header-line {\n  width: 100%;\n  height: 110px;\n  background-color: #7d7b71;\n  margin-bottom: 30px; }\n\n.logo {\n  width: 168px;\n  height: 118px;\n  float: left;\n  margin-left: 25px;\n  background-size: cover; }\n\n.growth-list-mod {\n  background: #fff;\n  padding: 18px 0 40px;\n  position: relative;\n  min-height: 400px;\n  margin-bottom: 20px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box; }\n\n.title_show {\n  margin-left: 100px;\n  width: 368px;\n  height: 118px; }\n\n.rank-list-mod {\n  background: #fff;\n  padding: 18px 0 40px;\n  position: relative;\n  min-height: 400px;\n  margin-top: 20px;\n  margin-bottom: 20px;\n  margin-right: 20px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border-radius: 4%;\n  border: 1px solid #ADADAD; }\n\n.rank-list-mod .rank-top-nav {\n    border-bottom: 1px solid #EDEDEF;\n    margin: 0 24px;\n    height: 45px; }\n\n.rank-top {\n  width: 50%;\n  color: #333;\n  font-size: 18px;\n  float: left;\n  line-height: 43px;\n  border-bottom: 2px solid #FFF;\n  position: relative; }\n\n.clearfix:after, .g-clearfix:after, .ym-clearfix:after {\n  content: \"\";\n  height: 0;\n  overflow: hidden;\n  clear: both;\n  display: block;\n  visibility: hidden; }\n\n.rank-load-area {\n  padding-top: 5px; }\n\n.top-three .top-three-inbox {\n  height: 47px;\n  margin: 0 24px;\n  position: relative;\n  padding: 8px 0;\n  border-bottom: 1px dashed #E5E5E5; }\n\n.top-three .top-three-inbox img {\n    width: 42px;\n    height: 42px;\n    border-radius: 50%;\n    float: left; }\n\n.grade-tip {\n  font-family: Arial;\n  font-style: oblique;\n  display: block;\n  position: absolute;\n  width: 28px;\n  height: 12px;\n  padding-right: 2px;\n  line-height: 12px;\n  background: #FFF;\n  color: #fff;\n  border-radius: 2px;\n  text-align: center;\n  left: 7px;\n  bottom: 7px;\n  font-size: 10px;\n  font-weight: 700; }\n\n.rank-load-area .top-three .grade-tip.top-one {\n  background: #EF4C4A;\n  color: #FFF; }\n\n.rank-load-area .top-three .grade-tip.top-two {\n  background: #FF5809;\n  color: #FFF; }\n\n.rank-load-area .top-three .grade-tip.top-three {\n  background: #f0ec07;\n  color: #FFF; }\n"
 
 /***/ }),
 
@@ -717,9 +764,7 @@ module.exports = ".practice-lists {\n  width: 240px;\n  height: 116px;\n  -webki
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PracticeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mock_practice_lists__ = __webpack_require__("./src/app/online-test/practice/mock-practice-lists.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mock_practice_tabs__ = __webpack_require__("./src/app/online-test/practice/mock-practice-tabs.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mock_practice_items__ = __webpack_require__("./src/app/online-test/practice/mock-practice-items.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__ = __webpack_require__("./src/app/shared/service/data.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -731,23 +776,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
 var PracticeComponent = (function () {
-    function PracticeComponent() {
-        this.lists = __WEBPACK_IMPORTED_MODULE_1__mock_practice_lists__["a" /* LISTS */];
-        this.OnSelectedList = this.lists[0];
-        this.tabs = __WEBPACK_IMPORTED_MODULE_2__mock_practice_tabs__["a" /* TABS */];
-        this.OnSelectedTab = this.tabs[0];
-        this.items = __WEBPACK_IMPORTED_MODULE_3__mock_practice_items__["a" /* ITEMS */];
+    function PracticeComponent(dataService) {
+        var _this = this;
+        this.dataService = dataService;
+        this.dataService.getPracticeTitle().subscribe(function (data) { return _this.practiceTitles = data; });
+        this.dataService.getPracticeTab().subscribe(function (data) { return _this.practiceTabs = data; });
+        this.dataService.getPracticeItem().subscribe(function (data) { return _this.practiceItems = data; });
     }
-    PracticeComponent.prototype.SelectList = function (list) {
-        this.OnSelectedList = list;
+    PracticeComponent.prototype.ngOnInit = function () {
+    };
+    PracticeComponent.prototype.SelectList = function (title) {
+        this.OnSelectedTitle = title;
     };
     PracticeComponent.prototype.SelectTab = function (tab) {
         this.OnSelectedTab = tab;
     };
-    PracticeComponent.prototype.ngOnInit = function () {
+    PracticeComponent.prototype.SelectItem = function (item) {
+        this.OnSelectedItem = item;
     };
     PracticeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -755,7 +801,7 @@ var PracticeComponent = (function () {
             template: __webpack_require__("./src/app/online-test/practice/practice.component.html"),
             styles: [__webpack_require__("./src/app/online-test/practice/practice.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__shared_service_data_service__["a" /* DataService */]])
     ], PracticeComponent);
     return PracticeComponent;
 }());
@@ -767,14 +813,14 @@ var PracticeComponent = (function () {
 /***/ "./src/app/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"registerHeader\">\n    <div class=\"left\"></div>\n    <h1>Sign up to learn more</h1>\n    <div class=\"right\"></div>\n</div>\n\n<div class=\"registerContent\">\n    <img src=\"../../assets/images/login/veterinarian_dog.png\" class=\"vet-dog\">\n    <form class=\"registerForm\" #registerForm=\"ngForm\" (ngSubmit)=\"doSubmit(registerForm.value)\">\n        <label name=\"username\" for=\"username\" class=\"label\">\n            用户名&nbsp;<i class=\"fa fa-user\"></i></label>\n        <input type=\"text\" class=\"input\" name=\"username\" required [(ngModel)]=\"formData.userName\" #userName=\"ngModel\" minlength=\"4\"/>\n        <div *ngIf=\"userName.errors && (userName.dirty || userName.touched)\" class=\"error\">\n            <span [hidden]=\"!userName.errors.required\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;用户名必须输入\n            </span>\n            <span [hidden]=\"!userName.errors.minlength\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;用户名至少4位\n            </span>\n        </div>\n        <br>\n        <label for=\"password1\" class=\"label\">\n            密码&nbsp;<i class=\"fa fa-key\"></i></label>\n        <input type=\"password\" class=\"input\"  id=\"password1\" name=\"password1\" [(ngModel)]=\"formData.password1\" #password1=\"ngModel\"  required minlength=\"8\">\n        <div *ngIf=\"password1.errors && (password1.dirty || password1.touched)\" class=\"error\">\n            <span [hidden]=\"!password1.errors.required\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;密码必须输入\n            </span>\n            <span [hidden]=\"!password1.errors.minlength\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;密码至少8位\n            </span>\n        </div>\n        <br>\n        <label for=\"password2\" class=\"label\">\n            重复密码&nbsp;<i class=\"fa fa-key\"></i></label>\n        <input type=\"password\" id=\"password2\" class=\"input\" name=\"password2\" [(ngModel)]=\"formData.password2\" #password2=\"ngModel\" required>\n        <div *ngIf=\"password1.value != password2.value && (password2.dirty || password2.touched)\" class=\"error\">\n            <span>\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;两次输入不一致 \n            </span>\n        </div>\n        <br>\n        <label name=\"email\" for=\"email\" class=\"label\">\n            邮箱&nbsp;<i class=\"fa fa-envelope\"></i></label>\n        <input type=\"email\" class=\"input\" name=\"email\" [(ngModel)]=\"formData.email\" #email=\"ngModel\" pattern=\"[\\w]+?@[\\w]+?\\.[a-z]+?\" required/>\n        <div *ngIf=\"email.errors && (email.dirty || email.touched)\" class=\"error\">\n            <span [hidden]=\"!email.errors.required\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;邮箱必须输入</span>\n            <span [hidden]=\"!email.errors.pattern\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;邮箱格式不对</span>            \n        </div>      \n        <br>\n        <label name=\"phone\" for=\"phone\" class=\"label\">\n            手机号&nbsp;<i class=\"fa fa-mobile-phone fa-large\"></i></label>\n        <input type=\"text\" class=\"input\" name=\"phone\" [(ngModel)]=\"formData.phone\" #phone=\"ngModel\" pattern=\"^[0-9]*$\"/>\n        <div *ngIf=\"phone.errors && (phone.dirty || phone.touched)\" class=\"error\">\n                <span [hidden]=\"!phone.errors.pattern\">\n                    <i class=\"fa fa-info-circle large\"></i>\n                    &nbsp;手机号格式不对\n                </span>\n        </div>    \n        <br>\n        <input type=\"submit\" value=\"注册\" class=\"submit\" (click)=\"doSubmit(registerForm.value)\">\n      </form>\n</div>\n"
+module.exports = "<div class=\"registerHeader\">\n    <div class=\"left\"></div>\n    <h1>Sign up to learn more</h1>\n    <div class=\"right\"></div>\n</div>\n\n<div class=\"registerContent\">\n    <img src=\"../../assets/images/login/veterinarian_dog.png\" class=\"vet-dog\">\n    <form class=\"registerForm\" #registerForm=\"ngForm\" (ngSubmit)=\"doSubmit(registerForm.value)\">\n        <label name=\"username\" for=\"username\" class=\"label\">\n            用户名&nbsp;<i class=\"fa fa-user\"></i></label>\n        <input type=\"text\" class=\"input\" name=\"username\" required [(ngModel)]=\"formData.userName\" #userName=\"ngModel\" minlength=\"4\"/>\n        <div *ngIf=\"userName.errors && (userName.dirty || userName.touched)\" class=\"error\">\n            <span [hidden]=\"!userName.errors.required\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;用户名必须输入\n            </span>\n            <span [hidden]=\"!userName.errors.minlength\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;用户名至少4位\n            </span>\n        </div>\n        <br>\n        <label for=\"password1\" class=\"label\">\n            密码&nbsp;<i class=\"fa fa-key\"></i></label>\n        <input type=\"password\" class=\"input\"  id=\"password1\" name=\"password1\" [(ngModel)]=\"formData.password1\" #password1=\"ngModel\"  required minlength=\"8\">\n        <div *ngIf=\"password1.errors && (password1.dirty || password1.touched)\" class=\"error\">\n            <span [hidden]=\"!password1.errors.required\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;密码必须输入\n            </span>\n            <span [hidden]=\"!password1.errors.minlength\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;密码至少8位\n            </span>\n        </div>\n        <br>\n        <label for=\"password2\" class=\"label\">\n            重复密码&nbsp;<i class=\"fa fa-key\"></i></label>\n        <input type=\"password\" id=\"password2\" class=\"input\" name=\"password2\" [(ngModel)]=\"formData.password2\" #password2=\"ngModel\" required>\n        <div *ngIf=\"password1.value != password2.value && (password2.dirty || password2.touched)\" class=\"error\">\n            <span>\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;两次输入不一致\n            </span>\n        </div>\n        <br>\n        <label name=\"email\" for=\"email\" class=\"label\">\n            邮箱&nbsp;<i class=\"fa fa-envelope\"></i></label>\n        <input type=\"email\" class=\"input\" name=\"email\" [(ngModel)]=\"formData.email\" #email=\"ngModel\" pattern=\"[\\w]+?@[\\w]+?\\.[a-z]+?\" required/>\n        <div *ngIf=\"email.errors && (email.dirty || email.touched)\" class=\"error\">\n            <span [hidden]=\"!email.errors.required\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;邮箱必须输入</span>\n            <span [hidden]=\"!email.errors.pattern\">\n                <i class=\"fa fa-info-circle large\"></i>\n                &nbsp;邮箱格式不对</span>\n        </div>\n        <br>\n        <label name=\"phone\" for=\"phone\" class=\"label\">\n            手机号&nbsp;<i class=\"fa fa-mobile-phone fa-large\"></i></label>\n        <input type=\"text\" class=\"input\" name=\"phone\" [(ngModel)]=\"formData.phone\" #phone=\"ngModel\" pattern=\"^[0-9]*$\"/>\n        <div *ngIf=\"phone.errors && (phone.dirty || phone.touched)\" class=\"error\">\n                <span [hidden]=\"!phone.errors.pattern\">\n                    <i class=\"fa fa-info-circle large\"></i>\n                    &nbsp;手机号格式不对\n                </span>\n        </div>\n        <br>\n        <input type=\"submit\" value=\"注册\" class=\"submit\" (click)=\"doSubmit(registerForm.value)\">\n      </form>\n</div>\n<div class=\"shade\">\n</div>\n<div class=\"bright\">\n    <div class=\"title\">\n        <img src=\"../../assets/images/exam/exam-title.png\">\n        <span>Mother Xie's Care</span>\n    </div>\n    <div class=\"content\">\n          <div class=\"one\">激活邮件</div>\n          <div class=\"two\">系统已发送激活邮件，请查收，并点击邮件中的链接完成注册。</div>\n    </div>\n    <div class=\"bottom\">\n        <div class=\"index\">主页</div>\n        <div class=\"login\">返回登陆</div>\n    </div>\n        \n</div>\n"
 
 /***/ }),
 
 /***/ "./src/app/register/register.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".registerHeader {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n  font-family: 'Arial';\n  margin-top: 60px; }\n  .registerHeader .left {\n    position: absolute;\n    left: 0;\n    width: 35%;\n    height: 20px;\n    border: 0;\n    border-bottom: 1px solid #dfdfdf; }\n  .registerHeader .right {\n    position: absolute;\n    right: 0;\n    top: 60px;\n    width: 35%;\n    height: 20px;\n    border: 0;\n    border-bottom: 1px solid #dfdfdf; }\n  .registerContent {\n  width: 800px;\n  height: 300px;\n  margin: auto;\n  position: absolute;\n  top: 40px;\n  bottom: 0;\n  left: 0;\n  right: 0; }\n  .registerContent .vet-dog {\n    margin-left: 50px; }\n  .registerContent .registerForm {\n    width: 500px;\n    height: 300px;\n    text-align: left;\n    float: right; }\n  .registerContent .registerForm .error {\n      display: inline-block;\n      margin-left: 180px; }\n  .registerContent .registerForm .label {\n      display: inline-block;\n      width: 150px;\n      height: 20px;\n      text-align: right;\n      margin-right: 20px; }\n  .registerContent .registerForm .fieldset {\n      border: none; }\n  .registerContent .registerForm .input {\n      margin: 10px auto;\n      width: 300px;\n      height: 40px;\n      box-shadow: 0;\n      outline: none;\n      -webkit-box-shadow: 0;\n      -webkit-appearance: none;\n      border: 1px solid #dfdfdf;\n      border-radius: 3px; }\n  .registerContent .registerForm .input:focus {\n      box-shadow: 0;\n      -webkit-box-shadow: 0; }\n  .registerContent .registerForm input:-webkit-autofill, .registerContent .registerForm textarea:-webkit-autofill, .registerContent .registerForm select:-webkit-autofill {\n      -webkit-box-shadow: 0 0 0 0; }\n  .registerContent .registerForm .submit {\n      border: none;\n      padding: 0;\n      background: #00a0da;\n      margin-top: 20px;\n      margin-right: 25px;\n      color: #fff;\n      cursor: pointer;\n      font-size: 14px;\n      display: block;\n      width: 300px;\n      height: 40px;\n      border-radius: 3px;\n      position: relative;\n      float: right; }\n"
+module.exports = ".registerHeader {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n  font-family: 'Arial';\n  padding-top: 60px; }\n  .registerHeader .left {\n    position: absolute;\n    left: 0;\n    width: 35%;\n    height: 20px;\n    border: 0;\n    border-bottom: 1px solid #dfdfdf; }\n  .registerHeader .right {\n    position: absolute;\n    right: 0;\n    top: 60px;\n    width: 35%;\n    height: 20px;\n    border: 0;\n    border-bottom: 1px solid #dfdfdf; }\n  .registerContent {\n  width: 800px;\n  height: 300px;\n  margin: auto;\n  position: absolute;\n  top: 40px;\n  bottom: 0;\n  left: 0;\n  right: 0; }\n  .registerContent .vet-dog {\n    margin-left: 50px; }\n  .registerContent .registerForm {\n    width: 500px;\n    height: 300px;\n    text-align: left;\n    float: right; }\n  .registerContent .registerForm .error {\n      display: inline-block;\n      margin-left: 180px; }\n  .registerContent .registerForm .label {\n      display: inline-block;\n      width: 150px;\n      height: 20px;\n      text-align: right;\n      margin-right: 20px; }\n  .registerContent .registerForm .fieldset {\n      border: none; }\n  .registerContent .registerForm .input {\n      margin: 10px auto;\n      width: 300px;\n      height: 40px;\n      box-shadow: 0;\n      outline: none;\n      -webkit-box-shadow: 0;\n      -webkit-appearance: none;\n      border: 1px solid #dfdfdf;\n      border-radius: 3px; }\n  .registerContent .registerForm .input:focus {\n      box-shadow: 0;\n      -webkit-box-shadow: 0; }\n  .registerContent .registerForm input:-webkit-autofill, .registerContent .registerForm textarea:-webkit-autofill, .registerContent .registerForm select:-webkit-autofill {\n      -webkit-box-shadow: 0 0 0 0; }\n  .registerContent .registerForm .submit {\n      border: none;\n      padding: 0;\n      background: #00a0da;\n      margin-top: 20px;\n      margin-right: 25px;\n      color: #fff;\n      cursor: pointer;\n      font-size: 14px;\n      display: block;\n      width: 300px;\n      height: 40px;\n      border-radius: 3px;\n      position: relative;\n      float: right; }\n  .shade {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: #919191;\n  z-index: 10;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  opacity: 0.5;\n  display: block; }\n  .bright {\n  z-index: 100;\n  width: 750px;\n  height: 350px;\n  background-color: #fff;\n  position: relative;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, 20%);\n          transform: translate(-50%, 20%);\n  display: block;\n  border-radius: 12px; }\n  .bright .title {\n    height: 100px;\n    width: 100%;\n    background-color: #7d7b71;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    border-radius: 12px 12px 0 0; }\n  .bright .title img {\n      height: 100px; }\n  .bright .title span {\n      font-family: 'Roboto-Slab-Regular';\n      color: #fff;\n      font-size: 30px; }\n  .bright .content {\n    width: 100%;\n    padding: 30px;\n    border-radius: 0 0 12px 12px; }\n  .bright .content .one {\n      font-size: 30px;\n      font-family: 'Roboto-Slab-Regular';\n      color: #222c37;\n      margin-bottom: 10px;\n      font-weight: normal; }\n  .bright .content .two {\n      font-size: 20px;\n      font-family: 'Roboto-Slab-Thin';\n      color: #5a5a5b;\n      font-weight: lighter; }\n  .bright .bottom {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    margin-left: 30px;\n    font-family: 'Roboto-Slab-Thin'; }\n  .bright .bottom .index {\n      border-radius: 4px;\n      padding: 10px 15px;\n      width: 32px;\n      background-color: #00a0da;\n      color: #fff;\n      margin-right: 15px; }\n  .bright .bottom .login {\n      border: #222c37 1px solid;\n      border-radius: 4px;\n      padding: 10px 15px;\n      width: 64px;\n      color: #5a5a5b; }\n"
 
 /***/ }),
 
@@ -857,8 +903,7 @@ var RegisterComponent = (function () {
             this.onValueChanged(obj);
             return;
         }
-        var url = 'http://172.20.10.2/user/register/';
-        console.log(JSON.stringify(obj));
+        var url = 'http://localhost:8000/user/register';
         this.http.post(url, obj).subscribe(function (data) {
             console.log(data);
         }, function (err) {
@@ -889,14 +934,14 @@ var RegisterComponent = (function () {
 /***/ "./src/app/roleplay/big-pic/big-pic.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mask\" [class.hide] = \"isHide\" (click)=\"closePic()\"></div>\n<div class=\"pic-box\" [class.hide] = \"isHide\" >\n    <div class=\"pic\">\n        <div class=\"image\"><img [src] = \"currentPic\"></div>     \n    </div>\n    <div class=\"float-board\">\n        <div class=\"out\" (click)=\"closePic()\"><img src=\"../../assets/images/quit.png\"></div>\n        <div class=\"float-func\">\n            <div class=\"change\">\n                <div class=\"left\" (click)=\"downPage()\"><img src=\"../../assets/images/left.png\"></div>\n                <div class=\"right\" (click)=\"upPage()\"><img src=\"../../assets/images/right.png\"></div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"mask\" [class.hide] = \"isHide\" (click)=\"closePic()\"></div>\n<div class=\"pic-box\" [class.hide] = \"isHide\" >\n    <div class=\"pic\">\n        <div class=\"image\"><img [src]=\"currentPic\"></div>     \n    </div>\n    <div class=\"float-board\">\n        <div class=\"out\" (click)=\"closePic()\"><img src=\"../../assets/images/role/quit.png\"></div>\n        <div class=\"float-func\">\n            <div class=\"change\">\n                <div class=\"left\" (click)=\"downPage()\"><img src=\"../../assets/images/role/left.png\"></div>\n                <div class=\"right\" (click)=\"upPage()\"><img src=\"../../assets/images/role/right.png\"></div>\n            </div>\n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "./src/app/roleplay/big-pic/big-pic.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".pic-box {\n  position: absolute;\n  margin: 30px;\n  top: 113px;\n  bottom: 72px;\n  left: 20px;\n  width: 90%;\n  z-index: 11;\n  border-radius: 12px; }\n  .pic-box:hover .float-board {\n    display: block; }\n  .pic-box .pic {\n    height: 100%;\n    width: 100%;\n    position: absolute; }\n  .pic-box .pic .image {\n      border-radius: 12px;\n      border: 1px solid #eee;\n      width: 100%;\n      height: 100%;\n      background: #fff; }\n  .pic-box .pic .image img {\n        width: 100%;\n        position: relative;\n        top: 50%;\n        -webkit-transform: translateY(-50%);\n                transform: translateY(-50%); }\n  .float-board {\n  position: absolute;\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  width: 100%;\n  height: 100%;\n  display: none;\n  z-index: 10;\n  opacity: 0;\n  border-radius: 12px;\n  -webkit-transition-timing-function: ease-in;\n          transition-timing-function: ease-in; }\n  .float-board:hover {\n  opacity: 0.5; }\n  .float-func {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  border-radius: 12px; }\n  .out {\n  position: absolute;\n  top: 15px;\n  right: 10px; }\n  .out img {\n    height: 20px;\n    width: 20px; }\n  .change {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  position: absolute;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  width: 100%; }\n  .change .left {\n    padding: 0 10px; }\n  .change .right {\n    padding: 0 10px; }\n  .change img {\n    height: 30px;\n    width: 30px; }\n  .hide {\n  display: none; }\n  .mask {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  opacity: 0.7;\n  background: #9E9E9E; }\n"
+module.exports = ".pic-box {\n  position: absolute;\n  margin: 20px;\n  top: 0px;\n  bottom: 0px;\n  left: 20px;\n  width: 90%;\n  z-index: 11;\n  border-radius: 12px; }\n  .pic-box:hover .float-board {\n    display: block; }\n  .pic-box .pic {\n    height: 100%;\n    width: 100%;\n    position: absolute; }\n  .pic-box .pic .image {\n      border-radius: 12px;\n      border: 1px solid #eee;\n      width: 100%;\n      height: 100%;\n      background: #fff; }\n  .pic-box .pic .image img {\n        width: 100%;\n        position: relative;\n        top: 50%;\n        -webkit-transform: translateY(-50%);\n                transform: translateY(-50%); }\n  .float-board {\n  position: absolute;\n  -webkit-transition: opacity 1s;\n  transition: opacity 1s;\n  width: 100%;\n  height: 100%;\n  display: none;\n  z-index: 10;\n  opacity: 0;\n  border-radius: 12px;\n  -webkit-transition-timing-function: ease-in;\n          transition-timing-function: ease-in; }\n  .float-board:hover {\n  opacity: 0.5; }\n  .float-func {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  border-radius: 12px; }\n  .out {\n  position: absolute;\n  top: 15px;\n  right: 10px; }\n  .out img {\n    height: 20px;\n    width: 20px; }\n  .change {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  position: absolute;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  width: 100%; }\n  .change .left {\n    padding: 0 10px; }\n  .change .right {\n    padding: 0 10px; }\n  .change img {\n    height: 30px;\n    width: 30px; }\n  .hide {\n  display: none; }\n  .mask {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  opacity: 0.7;\n  background: #9E9E9E; }\n"
 
 /***/ }),
 
@@ -917,16 +962,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 var BigPicComponent = (function () {
+    // @ViewChild('box')
+    // boxDiv: ElementRef;
+    // constructor(private elementRef: ElementRef, private renderer: Renderer) {
     function BigPicComponent() {
         this.isHide = true;
         this.index = 0;
+        this.pictures = [];
+        this.pageCount = 0;
     }
     BigPicComponent.prototype.ngOnInit = function () {
-        this.currentPic = this.pictures[this.index];
-        this.pageCount = this.pictures.length;
     };
+    // ngAfterViewInit() {
+    //     this.renderer.setElementStyle(this.boxDiv.nativeElement, 'width', '1620px');
+    //     console.log(this.boxDiv.nativeElement.style.width);
+    // }
     BigPicComponent.prototype.showPic = function () {
         this.isHide = false;
+        this.currentPic = this.pictures[0];
+        console.log(this.pictures);
     };
     BigPicComponent.prototype.closePic = function () {
         this.isHide = true;
@@ -943,10 +997,6 @@ var BigPicComponent = (function () {
             this.currentPic = this.pictures[this.index];
         }
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Array)
-    ], BigPicComponent.prototype, "pictures", void 0);
     BigPicComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-big-pic',
@@ -1003,7 +1053,7 @@ var BigPicModule = (function () {
 /***/ "./src/app/roleplay/card/card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\n    <div class=\"content\">\n      <app-big-pic [pictures] = \"pictures\"></app-big-pic>\n      <div class=\"info\">\n        <span class=\"title\">卫生间</span>\n        <span>ng generate component heroes,应用程序现在有了基本的标题。 \n                接下来你要创建一个新的组件来显示英雄信息并且把这个组件放到应用程序的外壳里去.\n                萌萌狗有各种形状和大小。有的小狗因为呆萌的表情惹人疼爱，\n                有的则因为五短身材令人怜惜。甚至还有一些会因为巨大的体型也会显得傻缺。</span>\n      </div>\n      <div class=\"media\">\n        <div class=\"pic\">\n          <img [src]=\"coverPic\">\n        </div>\n        <div class=\"cover\" (click)=\"onShowPic()\"><span>点击放大图片</span></div>\n        <div class=\"video\">\n          <img [src]=\"coverPic\">\n        </div>\n        <div class=\"cover\"><span>点击播放视频</span></div>\n      </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"main\">\n  <div *ngIf = \"content.title != ''\" class=\"content\">\n    <div *ngIf=\"content.pic.length\"><app-big-pic></app-big-pic></div>\n    <div class=\"info\">\n      <span class=\"title\">{{content.title}}</span>\n      <span>{{content.content}}</span>\n    </div>\n    <div class=\"media\">\n      <div class=\"pic\">\n        <img [src]=\"content.pic[0]\">\n      </div>\n      <div class=\"cover\" (click)=\"onShowPic()\">\n        <span>点击放大图片</span>\n      </div>\n      <div class=\"vedio\">\n        <img [src]=\"content.pic[0]\">\n      </div>\n      <div class=\"media\">\n        <div class=\"pic\">\n          <img [src]=\"coverPic\">\n        </div>\n        <div class=\"cover\" (click)=\"onShowPic()\"><span>点击放大图片</span></div>\n        <div class=\"video\">\n          <img [src]=\"coverPic\">\n        </div>\n        <div class=\"cover\"><span>点击播放视频</span></div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1034,10 +1084,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var CardComponent = (function () {
     function CardComponent() {
-        this.pictures = ["../../assets/images/cat1.jpg", "../../assets/images/cat2.jpg", "../../assets/images/cat3.jpeg"];
-        this.coverPic = this.pictures[0];
+        this.content = {
+            title: '',
+            content: '',
+            pic: [],
+            vedio: ''
+        };
     }
     CardComponent.prototype.onShowPic = function () {
+        console.log(this.bigPic);
+        this.bigPic.pictures = this.content.pic;
+        this.bigPic.pageCount = this.content.pic.length;
         this.bigPic.showPic();
     };
     __decorate([
@@ -1062,14 +1119,14 @@ var CardComponent = (function () {
 /***/ "./src/app/roleplay/dialog/dialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "  <div class=\"dialog\">\n\n    <div class=\"dialog-bar\">\n      <span>test</span>\n      <div class=\"btn-close\"><img src=\"../../assets/images/quit2.png\"></div>\n    </div>\n    <div class=\"dialog-ctnt\">\n      <ul>\n          <li>\n            <div *ngFor=\"let message of messages\">\n                <div *ngIf=\"!message.isUser\" class=\"sys-msg\">\n                    <div class=\"avatar\"></div>\n                    <div class=\"text\">{{message.content}}</div>\n                </div> \n                <div *ngIf=\"message.isUser\" class=\"usr-msg\">\n                  <div class=\"text\">{{message.content}}</div>\n                </div>\n            </div>\n          </li>\n      </ul>\n    </div>\n    <ul class=\"dialog-btm\">\n        <li>\n          <button class=\"btn\" (click)=\"addUserMessage(true)\">Yes, I understand.</button>\n        </li>\n        <li>\n          <button class=\"btn\" (click)=\"addUserMessage(false)\">No, I don't understand.</button>\n        </li>\n      </ul>\n  </div>\n  \n\n"
+module.exports = "<div class=\"dialog\" [class.hide] = \"isClose\">\n\n  <div class=\"dialog-bar\">\n    <span>test</span>\n    <div class=\"btn-close\" (click) = \"onClose()\">\n      <img src=\"../../../assets/images/role/quit2.png\">\n    </div>\n    <div class=\"dialog-ctnt\">\n      <ul>\n          <li>\n            <div *ngFor=\"let message of messages\">\n                <div *ngIf=\"!message.isUser\" class=\"sys-msg\">\n                    <div class=\"avatar\"></div>\n                    <div class=\"text\">{{message.content}}</div>\n                </div> \n                <div *ngIf=\"message.isUser\" class=\"usr-msg\">\n                  <div class=\"text\">{{message.content}}</div>\n                </div>\n            </div>\n          </li>\n      </ul>\n    </div>\n    <ul class=\"dialog-btm\">\n        <li>\n          <button class=\"btn\" (click)=\"addUserMessage(true)\">Yes, I understand.</button>\n        </li>\n        <li>\n          <button class=\"btn\" (click)=\"addUserMessage(false)\">No, I don't understand.</button>\n        </li>\n      </ul>\n  </div>\n  <ul class=\"dialog-btm\">\n    <li>\n      <button class=\"btn\" (click)=\"addUserMessage(true)\">Yes, I understand.</button>\n    </li>\n    <li>\n      <button class=\"btn\" (click)=\"addUserMessage(false)\">No, I don't understand.</button>\n    </li>\n  </ul>\n\n</div>"
 
 /***/ }),
 
 /***/ "./src/app/roleplay/dialog/dialog.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".dialog {\n  position: absolute;\n  top: 30px;\n  right: 30px;\n  left: 30px;\n  bottom: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  border: 1px solid #eee;\n  border-radius: 12px;\n  background: #fff; }\n\n.dialog-bar {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 0;\n      -ms-flex: 0 0 72px;\n          flex: 0 0 72px;\n  height: 72px;\n  border-bottom: 1px solid #eee;\n  padding-left: 35px;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\n.dialog-ctnt {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 0;\n      -ms-flex: 0 0 100px;\n          flex: 0 0 100px;\n  height: 100px; }\n\n.dialog-ctnt ul {\n    height: 100px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    width: 100%; }\n\n.dialog-ctnt ul li {\n      width: 100%; }\n\n.dialog-msg {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  width: 100%;\n  -webkit-box-flex: 100%;\n      -ms-flex: 100% 1 1;\n          flex: 100% 1 1; }\n\n.sys-msg {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  padding: 25px 30px 22px; }\n\n.sys-msg .text {\n    padding: 25px 30px 22px 30px;\n    max-width: 80%;\n    line-height: 1.7;\n    font-family: Tisa Pro;\n    font-weight: 200;\n    border-radius: 12px;\n    background: #f5f5f5; }\n\n.usr-msg {\n  position: absolute;\n  right: 20px; }\n\n.usr-msg .text {\n    padding: 25px 30px 22px 30px;\n    max-width: 80%;\n    line-height: 1.7;\n    font-family: Tisa Pro;\n    font-weight: 200;\n    border-radius: 15px;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0;\n    color: #fff;\n    background: #000; }\n\n.avatar {\n  -webkit-box-flex: 52px;\n      -ms-flex: 52px 0 0px;\n          flex: 52px 0 0;\n  margin-top: 8px;\n  width: 50px;\n  height: 50px;\n  background-color: blue;\n  margin: 5px 15px 0 0;\n  border-radius: 25px; }\n\n.dialog-btm {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 0;\n      -ms-flex: 0 0 115px;\n          flex: 0 0 115px;\n  height: 115px;\n  border-top: 1px solid #eee;\n  border-bottom: 1px;\n  padding: 30 15px;\n  background: #fff;\n  border-radius: 12px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\n.dialog-btm li {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 100%;\n        -ms-flex: 100%;\n            flex: 100%;\n    padding: 0 15px; }\n\n.btn {\n  height: 54px;\n  margin: 0;\n  vertical-align: baseline;\n  border: 0;\n  background: 0 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative;\n  padding: 10px 15px;\n  width: 100%;\n  font-size: 12px;\n  font-size: calc(12px*var(--scale-multiplier));\n  font-family: Akagi Pro;\n  font-weight: 600;\n  color: #fff;\n  line-height: 1.4;\n  background: #000;\n  border-radius: 30px; }\n\n.btn-close {\n  height: 30px;\n  width: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-right: 20px; }\n\n.btn-close img {\n    height: inherit;\n    width: inherit; }\n"
+module.exports = ".dialog {\n  position: absolute;\n  top: 30px;\n  right: 30px;\n  left: 30px;\n  bottom: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  border: 1px solid #eee;\n  border-radius: 12px;\n  background: #fff; }\n\n.hide {\n  display: none; }\n\n.dialog-bar {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 0;\n      -ms-flex: 0 0 72px;\n          flex: 0 0 72px;\n  height: 72px;\n  border-bottom: 1px solid #eee;\n  padding-left: 35px;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\n.dialog-ctnt {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  position: absolute;\n  top: 73px;\n  bottom: 116px;\n  left: 0;\n  right: 0;\n  overflow: hidden; }\n\n.dialog-ctnt ul {\n    position: absolute;\n    width: 100%;\n    bottom: 0;\n    left: 0;\n    right: 0; }\n\n.dialog-ctnt ul li {\n      width: 100%;\n      -webkit-animation: popin 1s ease-in-out;\n      animation: popin 1s ease-in-out; }\n\n@keyframes popin {\n  0% {\n    -webkit-transform: translate3d(0, 100px, 0);\n            transform: translate3d(0, 100px, 0); }\n  100% {\n    -webkit-transform: translate3d(0, 0px, 0);\n            transform: translate3d(0, 0px, 0); } }\n\n@-webkit-keyframes popin {\n  0% {\n    -webkit-transform: translate3d(0, 100px, 0);\n            transform: translate3d(0, 100px, 0); }\n  100% {\n    -webkit-transform: translate3d(0, 0px, 0);\n            transform: translate3d(0, 0px, 0); } }\n\n.sys-msg {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  padding: 0px 0px 20px 0px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\n.sys-msg .text {\n    padding: 25px 30px 22px 30px;\n    max-width: 80%;\n    line-height: 1.7;\n    font-family: Tisa Pro;\n    font-weight: 200;\n    border-radius: 12px;\n    background: #f5f5f5;\n    margin-right: 20px; }\n\n.sys-msg .avatar {\n    -webkit-box-flex: 52px;\n        -ms-flex: 52px 0 0px;\n            flex: 52px 0 0;\n    margin-top: 8px;\n    width: 50px;\n    height: 50px;\n    margin: 0 15px 0 20px;\n    border-radius: 25px; }\n\n.sys-msg .avatar img {\n      height: inherit;\n      width: inherit;\n      border-radius: 25px; }\n\n.usr-msg {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  height: 74px;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  margin-right: 20px;\n  padding: 0px 0px 20px 0px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\n.usr-msg .text {\n    padding: 25px 30px 22px 30px;\n    max-width: 80%;\n    line-height: 1.7;\n    font-family: Tisa Pro;\n    font-weight: 200;\n    border-radius: 15px;\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0;\n    color: #fff;\n    background: #000; }\n\n.usr-msg .avatar {\n    -webkit-box-flex: 52px;\n        -ms-flex: 52px 0 0px;\n            flex: 52px 0 0;\n    margin-top: 8px;\n    width: 50px;\n    height: 50px;\n    margin: 0 0 0 20px;\n    border-radius: 25px; }\n\n.usr-msg .avatar img {\n      height: inherit;\n      width: inherit;\n      border-radius: 25px; }\n\n.dialog-btm {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 0;\n      -ms-flex: 0 0 115px;\n          flex: 0 0 115px;\n  height: 115px;\n  border-top: 1px solid #eee;\n  border-bottom: 1px;\n  padding: 30 15px;\n  background: #fff;\n  border-radius: 0px 0px 12px w12px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\n.dialog-btm li {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-flex: 100%;\n        -ms-flex: 100%;\n            flex: 100%;\n    padding: 0 15px; }\n\n.btn {\n  height: 54px;\n  margin: 0;\n  vertical-align: baseline;\n  border: 0;\n  background: 0 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative;\n  padding: 10px 15px;\n  width: 100%;\n  font-size: 12px;\n  font-size: calc(12px*var(--scale-multiplier));\n  font-family: Akagi Pro;\n  font-weight: 600;\n  color: #fff;\n  line-height: 1.4;\n  background: #000;\n  border-radius: 30px; }\n\n.btn-close {\n  height: 30px;\n  width: 30px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-right: 20px; }\n\n.btn-close img {\n    height: inherit;\n    width: inherit; }\n"
 
 /***/ }),
 
@@ -1092,11 +1149,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var DialogComponent = (function () {
     function DialogComponent() {
         var _this = this;
+        this.dialogMsg = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.progresses = [
-            'first step',
-            'second step',
+            'first stepfirst',
+            'second stepsecond',
             'third step',
             'fourth step'
+        ];
+        this.clickMessages = [
+            '前台',
+            null,
+            '档案室',
+            null
         ];
         this.userMessage = {
             "true": "Yes I understand",
@@ -1110,28 +1174,47 @@ var DialogComponent = (function () {
             }
             _this.messages.push({
                 "content": _this.progresses[_this.currentIndex],
-                "isUser": false
+                "isUser": false,
+                "clickMsg": _this.clickMessages[_this.currentIndex]
             });
         };
         this.addUserMessage = function (flag) {
             _this.messages.push({
                 "content": _this.userMessage[flag],
-                "isUser": true
+                "isUser": true,
+                "clickMsg": null
             });
-            _this.addSysMessage(flag);
+            setTimeout(function () { return _this.addSysMessage(flag); }, 1000);
         };
     }
     DialogComponent.prototype.ngOnInit = function () {
         this.messages.push({
             "content": this.progresses[0],
-            "isUser": false
+            "isUser": false,
+            "clickMsg": this.clickMessages[0]
         });
     };
+    DialogComponent.prototype.onClickMsg = function (clickMsg) {
+        if (clickMsg) {
+            this.dialogMsg.emit(clickMsg);
+        }
+    };
+    DialogComponent.prototype.onClose = function () {
+        this.messages = null;
+        this.isClose = true;
+        if (this.isClose) {
+            this.dialogMsg.emit("close");
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"])
+    ], DialogComponent.prototype, "dialogMsg", void 0);
     DialogComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-dialog',
             template: __webpack_require__("./src/app/roleplay/dialog/dialog.component.html"),
-            styles: [__webpack_require__("./src/app/roleplay/dialog/dialog.component.scss")]
+            styles: [__webpack_require__("./src/app/roleplay/dialog/dialog.component.scss")],
         }),
         __metadata("design:paramtypes", [])
     ], DialogComponent);
@@ -1153,12 +1236,14 @@ var DialogComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dialog_dialog_component__ = __webpack_require__("./src/app/roleplay/dialog/dialog.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tutor_tutor_component__ = __webpack_require__("./src/app/roleplay/tutor/tutor.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__big_pic_bigPic_module__ = __webpack_require__("./src/app/roleplay/big-pic/bigPic.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_service_data_service__ = __webpack_require__("./src/app/shared/service/data.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1179,6 +1264,9 @@ var RoleplayModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3__dialog_dialog_component__["a" /* DialogComponent */],
                 __WEBPACK_IMPORTED_MODULE_4__tutor_tutor_component__["a" /* TutorComponent */]
             ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_6__shared_service_data_service__["a" /* DataService */]
+            ],
             exports: [__WEBPACK_IMPORTED_MODULE_4__tutor_tutor_component__["a" /* TutorComponent */]]
         })
     ], RoleplayModule);
@@ -1192,14 +1280,14 @@ var RoleplayModule = (function () {
 /***/ "./src/app/roleplay/tutor/tutor.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"content\">\n    <div class=\"top-bar\"></div>\n    <div class=\"department-info\"><app-card></app-card></div>\n    <div class=\"btm-bar\"></div>\n    <div class=\"right\"><app-dialog></app-dialog></div>\n</div>\n"
+module.exports = "<div class=\"content\">\n    <div class=\"top-bar\"></div>\n    <div class=\"department-info\" [class.hide]=\"isHide\"><app-card></app-card></div>\n    <div class=\"btm-bar\"></div>\n    <div class=\"right\">\n        <app-dialog (dialogMsg)=\"getContentInfo($event)\"></app-dialog>\n    </div>\n</div>"
 
 /***/ }),
 
 /***/ "./src/app/roleplay/tutor/tutor.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".content {\n  height: 100%;\n  width: 100%; }\n  .content .right {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    height: 100%;\n    width: 50%;\n    font-size: 16px;\n    line-height: 1.5; }\n  .content .top-bar {\n    position: fixed;\n    top: 0;\n    background: #111;\n    height: 100px;\n    width: 100%; }\n  .content .department-info {\n    position: fixed;\n    top: 100px;\n    bottom: 100px;\n    width: 50%; }\n  .content .btm-bar {\n    position: fixed;\n    bottom: 0;\n    background: #111;\n    height: 100px;\n    width: 100%; }\n"
+module.exports = ".hide {\n  display: none; }\n\n.top-bar {\n  position: fixed;\n  top: 0;\n  background: #111;\n  height: 100px;\n  width: 100%;\n  -webkit-transition: height 1s ease-in;\n  transition: height 1s ease-in; }\n\n.btm-bar {\n  position: fixed;\n  bottom: 0;\n  background: #111;\n  height: 100px;\n  width: 100%;\n  -webkit-transition: height 1s ease-in;\n  transition: height 1s ease-in; }\n\n.content {\n  height: 100%;\n  width: 100%; }\n\n.content .right {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    height: 100%;\n    width: 50%;\n    font-size: 16px;\n    line-height: 1.5; }\n\n.content .department-info {\n    position: fixed;\n    top: 100px;\n    bottom: 100px;\n    width: 50%; }\n"
 
 /***/ }),
 
@@ -1209,6 +1297,10 @@ module.exports = ".content {\n  height: 100%;\n  width: 100%; }\n  .content .rig
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__card_card_component__ = __webpack_require__("./src/app/roleplay/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_service_data_service__ = __webpack_require__("./src/app/shared/service/data.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash__ = __webpack_require__("./node_modules/lodash/lodash.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1219,18 +1311,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var TutorComponent = (function () {
-    function TutorComponent() {
+    function TutorComponent(dataService) {
+        var _this = this;
+        this.dataService = dataService;
+        this.isHide = true;
+        this.dataService.getRoleInfo()
+            .subscribe(function (data) { return _this.roleInfo = data; });
     }
-    TutorComponent.prototype.ngOnInit = function () {
+    TutorComponent.prototype.ngOnInit = function () { };
+    TutorComponent.prototype.getContentInfo = function (contentMsg) {
+        if (contentMsg === "close") {
+            this.isHide = true;
+        }
+        else if (contentMsg) {
+            var rawContent = __WEBPACK_IMPORTED_MODULE_3_lodash__["filter"](this.roleInfo, { id: contentMsg })[0];
+            this.card.content.title = rawContent.id;
+            this.card.content.content = rawContent.data.content;
+            this.card.content.pic = rawContent.data.pic;
+            this.card.content.vedio = rawContent.data.vedio;
+            console.log(this.card.content);
+            this.isHide = false;
+        }
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1__card_card_component__["a" /* CardComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__card_card_component__["a" /* CardComponent */])
+    ], TutorComponent.prototype, "card", void 0);
     TutorComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-tutor',
             template: __webpack_require__("./src/app/roleplay/tutor/tutor.component.html"),
             styles: [__webpack_require__("./src/app/roleplay/tutor/tutor.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__shared_service_data_service__["a" /* DataService */]])
     ], TutorComponent);
     return TutorComponent;
 }());
@@ -1456,10 +1573,79 @@ var SceneComponent = (function () {
 
 /***/ }),
 
+/***/ "./src/app/shared/service/data.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var API_URL = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiUrl;
+var JSON_URL = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].jsonUrl;
+var DataService = (function () {
+    function DataService(http) {
+        this.http = http;
+    }
+    DataService.prototype.getRoomInfo = function () {
+        var dataUrl = JSON_URL + '/navigation.json';
+        return this.http.get(dataUrl);
+    };
+    DataService.prototype.getRoleInfo = function () {
+        var dataUrl = JSON_URL + '/role-info.json';
+        return this.http.get(dataUrl);
+    };
+    DataService.prototype.getMistakes = function () {
+        var dataUrl = JSON_URL + '/mistakes.json';
+        return this.http.get(dataUrl);
+    };
+    DataService.prototype.getCollection = function () {
+        var dataUrl = JSON_URL + '/collections.json';
+        return this.http.get(dataUrl);
+    };
+    DataService.prototype.getQuestions = function () {
+        var dataUrl = JSON_URL + '/questionList.json';
+        return this.http.get(dataUrl);
+    };
+    DataService.prototype.getPracticeTitle = function () {
+        var dataUrl = JSON_URL + '/practiceTitle.json';
+        return this.http.get(dataUrl);
+    };
+    DataService.prototype.getPracticeTab = function () {
+        var dataUrl = JSON_URL + '/practiceTab.json';
+        return this.http.get(dataUrl);
+    };
+    DataService.prototype.getPracticeItem = function () {
+        var dataUrl = JSON_URL + '/examlist.json';
+        return this.http.get(dataUrl);
+    };
+    DataService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], DataService);
+    return DataService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/userinfo/userinfo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\n  <div class=\"img-container\">\n    <a href=\"/\">\n      <img class=\"logo\" src=\"../../assets/images/index/logo.png\" />\n    </a>\n  </div>\n</div>\n\n<div>\n  <div class=\"left\">\n    <div class=\"avatar\">\n      <img src=\"../../assets/images/7.jpg\" class=\"avatar_img\"/>\n      <br>\n      <button (click)=\"changeAvatar()\" class=\"change_ava_btn\">更改头像</button>\n    </div>\n    <div class=\"tabs\">\n      <div class=\"tab\" [ngClass]=\"{'active':currentTab == 0}\"><a href=\"javascript:;\" (click)=\"switchTabs(0)\">账号信息</a></div>\n      <div class=\"tab\" [ngClass]=\"{'active':currentTab == 1}\"><a href=\"javascript:;\" (click)=\"switchTabs(1)\">学习记录</a></div>\n      <div class=\"tab\" [ngClass]=\"{'active':currentTab == 2}\"><a href=\"javascript:;\" (click)=\"switchTabs(2)\">错题记录</a></div>\n    </div>\n  </div>\n  <div class=\"right\">\n      <div class=\"tab0\" *ngIf=\"currentTab==0\">\n        <form class=\"changeInfo\" #changeInfoForm=\"ngForm\" (ngSubmit)=\"doSubmit(changeInfoForm.value)\">\n          <label name=\"username\" for=\"username\" class=\"label\">\n              用户名&nbsp;<i class=\"fa fa-user\"></i></label>\n          <input type=\"text\" class=\"input\" name=\"username\" required [(ngModel)]=\"formData.userName\" #userName=\"ngModel\" minlength=\"4\"/>\n          <div *ngIf=\"userName.errors && (userName.dirty || userName.touched)\" class=\"error\">\n              <span [hidden]=\"!userName.errors.required\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;用户名必须输入\n              </span>\n              <span [hidden]=\"!userName.errors.minlength\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;用户名至少4位\n              </span>\n          </div>\n          <br>\n          <label for=\"password1\" class=\"label\">\n              密码&nbsp;<i class=\"fa fa-key\"></i></label>\n          <input type=\"password\" class=\"input\"  id=\"password1\" name=\"password1\" [(ngModel)]=\"formData.password1\" #password1=\"ngModel\"  required minlength=\"8\">\n          <div *ngIf=\"password1.errors && (password1.dirty || password1.touched)\" class=\"error\">\n              <span [hidden]=\"!password1.errors.required\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;密码必须输入\n              </span>\n              <span [hidden]=\"!password1.errors.minlength\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;密码至少8位\n              </span>\n          </div>\n          <br>\n          <label for=\"password2\" class=\"label\">\n              重复密码&nbsp;<i class=\"fa fa-key\"></i></label>\n          <input type=\"password\" id=\"password2\" class=\"input\" name=\"password2\" [(ngModel)]=\"formData.password2\" #password2=\"ngModel\" required>\n          <div *ngIf=\"password1.value != password2.value && (password2.dirty || password2.touched)\" class=\"error\">\n              <span>\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;两次输入不一致 \n              </span>\n          </div>\n          <br>\n          <label name=\"email\" for=\"email\" class=\"label\">\n              邮箱&nbsp;<i class=\"fa fa-envelope\"></i></label>\n          <input type=\"email\" class=\"input\" name=\"email\" [(ngModel)]=\"formData.email\" #email=\"ngModel\" pattern=\"[\\w]+?@[\\w]+?\\.[a-z]+?\" required/>\n          <div *ngIf=\"email.errors && (email.dirty || email.touched)\" class=\"error\">\n              <span [hidden]=\"!email.errors.required\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;邮箱必须输入</span>\n              <span [hidden]=\"!email.errors.pattern\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;邮箱格式不对</span>            \n          </div>      \n          <br>\n          <label name=\"phone\" for=\"phone\" class=\"label\">\n              手机号&nbsp;<i class=\"fa fa-mobile-phone fa-large\"></i></label>\n          <input type=\"text\" class=\"input\" name=\"phone\" [(ngModel)]=\"formData.phone\" #phone=\"ngModel\" pattern=\"^[0-9]*$\"/>\n          <div *ngIf=\"phone.errors && (phone.dirty || phone.touched)\" class=\"error\">\n                  <span [hidden]=\"!phone.errors.pattern\">\n                      <i class=\"fa fa-info-circle large\"></i>\n                      &nbsp;手机号格式不对\n                  </span>\n          </div>    \n          <br>\n          <input type=\"submit\" value=\"确认修改\" class=\"submit\" (click)=\"doSubmit(changeInfoForm.value)\">\n        </form>\n      </div>\n      <div class=\"tab1\" *ngIf=\"currentTab==1\">\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n      </div>\n      <div class=\"tab2\" *ngIf=\"currentTab==2\">\n        <p>错题记录</p>\n      </div>\n  </div>\n</div>\n<footer class=\"index-footer clearfix\">\n    <div class=\"footer-content clearfix\">\n        <div class=\"footer-left\">\n            <h4 class=\"p-name\">\n                <span>Virtual Pet Hospital</span>\n            </h4>\n            <p class=\"p-address p-icon\">\n                <span>3663 North Zhongshan Rd</span>\n            </p>\n            <p class=\"p-phone p-icon\">\n                <span>(021)8888-8888</span>\n            </p>\n            <p class=\"p-email p-icon\">\n                <span>1542752218@qq.com</span>\n            </p>\n            <p class=\"p-chat p-icon\">\n                <span>Live Chat</span>\n            </p>\n        </div>\n        <div class=\"footer-right\" id=\"contactUs\">\n            <div class=\"social-links\">\n                <a href=\"/\">\n                    <img src=\"./../../assets/images/index/qq.png\">\n                </a>\n                <a href=\"/\">\n                    <img src=\"./../../assets/images/index/wechat.png\"></a>\n                <a href=\"/\">\n                    <img src=\"./../../assets/images/index/facebook.png\">\n                </a>\n                <a href=\"/\">\n                    <img src=\"./../../assets/images/index/google.png\">\n                </a>\n            </div>\n            <div class=\"work-hours\">\n                <p>\n                    Work hours:<br>Mon - Fri 7:30 am - 5:30 pm<br>Sat 8:00 am - 12:30 pm<br>Closed Sunday\n                </p>\n            </div>\n            <div class=\"copyright\">\n                <p>Copyright © 2018 Virtual Pet Hospital</p>\n            </div>\n        </div>\n    </div>\n</footer>\n\n<div class=\"mask\" (click)=\"closeImage\"></div>\n<div class=\"image-upload-popup\" *ngIf=\"isUploadingImage\">\n    <image-upload></image-upload>  \n</div>"
+module.exports = "<div class=\"header\">\n  <div class=\"img-container\">\n    <a href=\"/\">\n      <img class=\"logo\" src=\"../../assets/images/index/logo.png\" />\n    </a>\n  </div>\n</div>\n\n<div>\n  <div class=\"left\">\n    <div class=\"avatar\">\n      <img src=\"../../assets/images/7.jpg\" class=\"avatar_img\"/>\n      <br>\n      <button (click)=\"changeAvatar()\" class=\"change_ava_btn\">更改头像</button>\n    </div>\n    <div class=\"tabs\">\n      <div class=\"tab\" [ngClass]=\"{'active':currentTab == 0}\"><a href=\"javascript:;\" (click)=\"switchTabs(0)\">账号信息</a></div>\n      <div class=\"tab\" [ngClass]=\"{'active':currentTab == 1}\"><a href=\"javascript:;\" (click)=\"switchTabs(1)\">学习记录</a></div>\n      <div class=\"tab\" [ngClass]=\"{'active':currentTab == 2}\"><a href=\"javascript:;\" (click)=\"switchTabs(2)\">错题记录</a></div>\n    </div>\n  </div>\n  <div class=\"right\">\n      <div class=\"tab0\" *ngIf=\"currentTab==0\">\n        <form class=\"changeInfo\" #changeInfoForm=\"ngForm\" (ngSubmit)=\"doSubmit(changeInfoForm.value)\">\n          <label name=\"username\" for=\"username\" class=\"label\">\n              用户名&nbsp;<i class=\"fa fa-user\"></i></label>\n          <input type=\"text\" class=\"input\" name=\"username\" required [(ngModel)]=\"formData.userName\" #userName=\"ngModel\" minlength=\"4\"/>\n          <div *ngIf=\"userName.errors && (userName.dirty || userName.touched)\" class=\"error\">\n              <span [hidden]=\"!userName.errors.required\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;用户名必须输入\n              </span>\n              <span [hidden]=\"!userName.errors.minlength\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;用户名至少4位\n              </span>\n          </div>\n          <br>\n          <label for=\"password1\" class=\"label\">\n              密码&nbsp;<i class=\"fa fa-key\"></i></label>\n          <input type=\"password\" class=\"input\"  id=\"password1\" name=\"password1\" [(ngModel)]=\"formData.password1\" #password1=\"ngModel\"  required minlength=\"8\">\n          <div *ngIf=\"password1.errors && (password1.dirty || password1.touched)\" class=\"error\">\n              <span [hidden]=\"!password1.errors.required\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;密码必须输入\n              </span>\n              <span [hidden]=\"!password1.errors.minlength\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;密码至少8位\n              </span>\n          </div>\n          <br>\n          <label for=\"password2\" class=\"label\">\n              重复密码&nbsp;<i class=\"fa fa-key\"></i></label>\n          <input type=\"password\" id=\"password2\" class=\"input\" name=\"password2\" [(ngModel)]=\"formData.password2\" #password2=\"ngModel\" required>\n          <div *ngIf=\"password1.value != password2.value && (password2.dirty || password2.touched)\" class=\"error\">\n              <span>\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;两次输入不一致 \n              </span>\n          </div>\n          <br>\n          <label name=\"email\" for=\"email\" class=\"label\">\n              邮箱&nbsp;<i class=\"fa fa-envelope\"></i></label>\n          <input type=\"email\" class=\"input\" name=\"email\" [(ngModel)]=\"formData.email\" #email=\"ngModel\" pattern=\"[\\w]+?@[\\w]+?\\.[a-z]+?\" required/>\n          <div *ngIf=\"email.errors && (email.dirty || email.touched)\" class=\"error\">\n              <span [hidden]=\"!email.errors.required\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;邮箱必须输入</span>\n              <span [hidden]=\"!email.errors.pattern\">\n                  <i class=\"fa fa-info-circle large\"></i>\n                  &nbsp;邮箱格式不对</span>            \n          </div>      \n          <br>\n          <label name=\"phone\" for=\"phone\" class=\"label\">\n              手机号&nbsp;<i class=\"fa fa-mobile-phone fa-large\"></i></label>\n          <input type=\"text\" class=\"input\" name=\"phone\" [(ngModel)]=\"formData.phone\" #phone=\"ngModel\" pattern=\"^[0-9]*$\"/>\n          <div *ngIf=\"phone.errors && (phone.dirty || phone.touched)\" class=\"error\">\n                  <span [hidden]=\"!phone.errors.pattern\">\n                      <i class=\"fa fa-info-circle large\"></i>\n                      &nbsp;手机号格式不对\n                  </span>\n          </div>    \n          <br>\n          <input type=\"submit\" value=\"确认修改\" class=\"submit\" (click)=\"doSubmit(changeInfoForm.value)\">\n        </form>\n      </div>\n      <div class=\"tab1\" *ngIf=\"currentTab==1\">\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n        <p>学习记录</p>\n      </div>\n      <div class=\"tab2\" *ngIf=\"currentTab==2\">\n        <p>错题记录</p>\n      </div>\n  </div>\n</div>\n<footer class=\"index-footer clearfix\">\n    <div class=\"footer-content clearfix\">\n        <div class=\"footer-left\">\n            <h4 class=\"p-name\">\n                <span>Virtual Pet Hospital</span>\n            </h4>\n            <p class=\"p-address p-icon\">\n                <span>3663 North Zhongshan Rd</span>\n            </p>\n            <p class=\"p-phone p-icon\">\n                <span>(021)8888-8888</span>\n            </p>\n            <p class=\"p-email p-icon\">\n                <span>1542752218@qq.com</span>\n            </p>\n            <p class=\"p-chat p-icon\">\n                <span>Live Chat</span>\n            </p>\n        </div>\n        <div class=\"footer-right\" id=\"contactUs\">\n            <div class=\"social-links\">\n                <a href=\"/\">\n                    <img src=\"./../../assets/images/index/qq.png\">\n                </a>\n                <a href=\"/\">\n                    <img src=\"./../../assets/images/index/wechat.png\"></a>\n                <a href=\"/\">\n                    <img src=\"./../../assets/images/index/facebook.png\">\n                </a>\n                <a href=\"/\">\n                    <img src=\"./../../assets/images/index/google.png\">\n                </a>\n            </div>\n            <div class=\"work-hours\">\n                <p>\n                    Work hours:<br>Mon - Fri 7:30 am - 5:30 pm<br>Sat 8:00 am - 12:30 pm<br>Closed Sunday\n                </p>\n            </div>\n            <div class=\"copyright\">\n                <p>Copyright © 2018 Virtual Pet Hospital</p>\n            </div>\n        </div>\n    </div>\n</footer>\n\n<div class=\"mask\" *ngIf=\"isUploadingImage\">\n    <div class=\"image-upload-popup\">\n        <image-upload url=\"\" (uploadFinished)=\"imageUploaded($event)\"\n        (removed)=\"imageRemoved($event)\"\n      (isPending)=\"disableSendButton($event)\"></image-upload>  \n    </div>\n</div>    \n\n\n"
 
 /***/ }),
 
@@ -1521,9 +1707,17 @@ var UserinfoComponent = (function () {
                 'pattern': '手机号格式不对',
             },
         };
+        this.closeImage = function () {
+            _this.isUploadingImage = false;
+        };
+        this.changeAvatar = function () {
+            _this.isUploadingImage = true;
+            console.log(_this.isUploadingImage);
+        };
         this.switchTabs = function (tabId) {
             _this.currentTab = tabId;
         };
+        this.file = [];
     }
     UserinfoComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
@@ -1547,6 +1741,15 @@ var UserinfoComponent = (function () {
     };
     UserinfoComponent.prototype.ngOnInit = function () {
         this.currentTab = 0;
+        this.isUploadingImage = false;
+    };
+    UserinfoComponent.prototype.imageUploaded = function (event) {
+        console.log(event);
+        this.file.push(event.file);
+        console.log(this.file);
+    };
+    UserinfoComponent.prototype.imageRemoved = function (event) {
+        console.log(event);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('changeInfoForm'),
@@ -1573,7 +1776,9 @@ var UserinfoComponent = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
-    production: false
+    production: false,
+    apiUrl: "http://localhost:8000",
+    jsonUrl: "assets/mock-data"
 };
 
 
